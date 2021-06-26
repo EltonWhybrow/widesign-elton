@@ -1,32 +1,26 @@
-<div class="max-w-sm mx-auto mt-10 rounded overflow-hidden shadow-lg space-y-4">
-  <!-- <img
-    class="h-64 w-full object-cover object-center"
-    src="https://source.unsplash.com/random"
-    alt="Random unsplash photo"
-  /> -->
-  <img
-    class="h-64 w-full object-cover object-center"
-    src="/assets/logos/logo_web_invert.svg"
-    alt="Wide Sign inverted logo"
-  />
-  <div class="px-6">
-    <div class="font-bold text-xl">{{ title }}</div>
-    <p class="text-gray-700 text-base">
-      New widesign using Angular 10 &amp; Tailwind css
-    </p>
-  </div>
-  <div class="flex px-6 pb-4 space-x-2">
-    <a
-      routerLink="/projects"
-      routerLinkActive="active"
-      class="flex-1 inline-block bg-indigo-500 rounded-sm px-4 py-5 text-2xl font-semibold text-white hover:bg-indigo-700"
-      >More Info
-    </a>
-    <a
-      routerLink="/contact-us"
-      routerLinkActive="active"
-      class="flex-1 inline-block bg-primary-500 rounded-sm px-4 py-5 text-2xl font-semibold text-white hover:bg-blue-400"
-      >Contact
-    </a>
+<div class="font-bold text-xl">{{ title }}</div>
+
+<div class="h-screen">
+  <div class="flex mx-auto mt-20">
+    <div class="flex-none">
+      <img
+        class="h-40 object-cover object-center"
+        src="/assets/logos/logo_web_invert.svg"
+        alt="Wide Sign inverted logo"
+      />
+    </div>
+
+    <div class="flex-1">
+      <svg viewBox="0 0 800 200">
+        <text x="50%" y="50%" fill="transparent" text-anchor="middle">
+          Elton Whybrow
+        </text>
+      </svg>
+    </div>
   </div>
 </div>
+
+<app-skills></app-skills>
+<app-projects></app-projects>
+<app-about></app-about>
+<app-testimonials></app-testimonials>
