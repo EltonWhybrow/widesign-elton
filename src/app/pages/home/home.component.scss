@@ -1,20 +1,26 @@
-svg text {
-  // stroke: theme("colors.primar");
+// Logo ani
+.path {
   stroke-dasharray: 0;
-  font-size: 120px;
-  font-weight: 600;
-  stroke-width: 1px;
-  animation: textAnimation 4s 1 linear;
-  font-family: "Bebas Neue", cursive;
+  stroke-dashoffset: 0;
+  fill: #0d888c;
+  animation: dash 3s linear reverse 1;
 }
 
-@keyframes textAnimation {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: 20;
+@keyframes dash {
+0% {
+    stroke-dashoffset: 0;
+     stroke-dasharray: 500;
+     stroke-opacity: 100%;
+     fill: #0d888c;
+  }
+  5% {
+    fill: white;
   }
   100% {
-    stroke-dasharray: 100% 0;
-    stroke-dashoffset: -20;
+    stroke-dashoffset: 800;
+     stroke-dasharray: 800;
+     stroke-opacity: 0%;
+     fill: white;
+
   }
 }
