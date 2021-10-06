@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  currentTab = 'generic';
+
+  constructor() {
+  }
+
+  handleEventClicked(data): void {
+    this.currentTab = data;
+  }
 
   ngOnInit(): void {
   }

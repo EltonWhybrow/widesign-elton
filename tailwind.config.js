@@ -4,7 +4,41 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      animation: {
+        loader: 'loader 1.5s ease-in-out',
+      },
+      keyframes: {
+        loader: {
+          '0%': {
+            // transform: 'scaleY(1)',
+            top: '0%',
+          },
+          // '15%': {
+          //   // transform: 'scaleY(0)',
+          //   top: '0%',
+          // },
+          // '85%': {
+          //   // transform: 'scaleY(0)',
+          //   top: '0%',
+          // },
+          '60%': {
+            // transform: 'scaleY(0)',
+            top: '0%',
+          },
+          '100%': {
+            // transform: 'scaleY(0)',
+            top: '100%',
+          },
+        },
+      },
+    },
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+
+      black: colors.black,
+      white: colors.white,
       'blue-chill': {
         '50': '#f3f9f9',
         '100': '#e7f3f4',
@@ -44,7 +78,11 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
+    extend: {
+      animation: ['hover', 'focus'],
+      transitionProperty: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }
