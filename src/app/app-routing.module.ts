@@ -6,9 +6,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
-import { DevComponent } from './pages/about/dev/dev.component';
-import { DesignComponent } from './pages/about/design/design.component';
-import { MeComponent } from './pages/about/me/me.component';
+
 
 
 const routes: Routes = [
