@@ -11,4 +11,4 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   declarations: [ContactComponent, DetailsComponent, ContactFormComponent],
   imports: [CommonModule, ContactRoutingModule, SharedModule],
 })
-export class ContactModule {}
+export class ContactModule { }

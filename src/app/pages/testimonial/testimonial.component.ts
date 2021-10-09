@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialComponent implements OnInit {
 
-  currentTab = 'generic';
+  currentTab = 'btroofing';
 
   constructor() {
   }

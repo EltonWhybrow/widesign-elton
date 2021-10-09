@@ -19,6 +19,7 @@ import { BtroofingComponent } from './pages/testimonial/btroofing/btroofing.comp
 import { Spares4mowersComponent } from './pages/testimonial/spares4mowers/spares4mowers.component'
 import { FlashlightComponent } from './pages/testimonial/flashlight/flashlight.component'
 
+
 @NgModule({
   declarations: [
     AppComponent,
