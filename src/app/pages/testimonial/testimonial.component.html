@@ -1,6 +1,6 @@
 <!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
 <div class="min-h-screen md:flex md:flex-column md:justify-center">
-  <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-16">
+  <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-12">
     <!-- MOBILE LOGO -->
     <!-- <app-logo-mobile class="flex h-screen md:h-auto md:hidden border-0 px-2 py-5"></app-logo-mobile> -->
     <!-- MOBILE LOGO PAGES -->
@@ -18,13 +18,13 @@
         bg-no-repeat bg-cover bg-center
         cursor-pointer
         w-full
-        bg-korma-400
-        p-5
+        bg-gray-200
+        p-3
         md:rounded md:h-auto md:row-span-1 md:col-span-1
       "
       style="background-image: url(/assets/testimonials/btroofing.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">BT <br />Roofing</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">BT <br />Roofing</h1>
       <div
         class="
           transition-opacity
@@ -40,7 +40,7 @@
           text-white
         "
       >
-        Jeff capes
+        Frankie Austin
       </div>
     </a>
 
@@ -56,13 +56,13 @@
         bg-no-repeat bg-cover bg-center
         cursor-pointer
         w-full
-        bg-korma-400
-        p-5
+        bg-gray-200
+        p-3
         md:rounded md:h-auto md:row-span-1 md:col-span-1
       "
       style="background-image: url(/assets/testimonials/spares4mowers.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Spares 4 <br />Mowers</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">Spares 4 <br />Mowers</h1>
       <div
         class="
           transition-opacity
@@ -78,19 +78,28 @@
           text-white
         "
       >
-        Jeff capes
+        Mark James
       </div>
     </a>
 
     <div
-      class="group md:h-auto md:row-span-2 md:col-span-2 w-full p-3 md:rounded border border-blue-chill-300 bg-no-repeat bg-cover bg-center"
+      class="
+        relative
+        group
+        md:h-auto md:row-span-2 md:col-span-2
+        w-full
+        p-3
+        md:rounded
+        border border-blue-chill-300
+        bg-no-repeat bg-cover bg-center
+      "
       style="background-image: url(/assets/testimonials/testimonial-selfie.jpg)"
     >
       <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
-        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
+        <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
         >Testimonials
       </h1>
-      <p class="text-white">Restoring faith in humanity, one perosn at a time.</p>
+      <!-- <p class="text-white">Restoring faith in humanity, one perosn at a time.</p> -->
       <!-- btroofing -->
       <div *ngIf="currentTab === 'btroofing'">
         <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
@@ -131,13 +140,13 @@
         bg-no-repeat bg-cover bg-center
         cursor-pointer
         w-full
-        bg-korma-400
-        p-5
+        bg-gray-200
+        p-3
         md:rounded md:h-auto md:row-span-1 md:col-span-1
       "
       style="background-image: url(/assets/testimonials/flashlight.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Flashlight <br />Photography</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">Flashlight <br />Photography</h1>
       <div
         class="
           transition-opacity
@@ -153,7 +162,7 @@
           text-white
         "
       >
-        Jeff capes
+        Sue King
       </div>
     </a>
 
@@ -169,13 +178,13 @@
         bg-no-repeat bg-cover bg-center
         cursor-pointer
         w-full
-        bg-korma-400
-        p-5
+        bg-gray-200
+        p-3
         md:rounded md:h-auto md:row-span-1 md:col-span-1
       "
       style="background-image: url(/assets/testimonials/budlandscapes.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Bud <br />Landscapes</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">Bud <br />Landscapes</h1>
       <div
         class="
           transition-opacity
@@ -191,7 +200,7 @@
           text-white
         "
       >
-        Jeff capes
+        Steve Corio
       </div>
     </a>
 

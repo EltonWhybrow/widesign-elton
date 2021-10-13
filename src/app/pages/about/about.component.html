@@ -1,12 +1,24 @@
 <!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
 <div class="min-h-screen md:flex md:flex-column md:justify-center">
-  <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-16">
+  <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-12">
     <!-- MOBILE LOGO -->
     <!-- <app-logo-mobile class="flex h-screen/2 md:h-auto md:hidden border-0 px-2 py-5"></app-logo-mobile> -->
     <!-- MOBILE LOGO PAGES -->
     <app-logo-sm class="md:hidden hover:animate-pulse"></app-logo-sm>
 
-    <div class="group h-screen/2 md:h-auto md:row-span-1 md:col-span-4 w-full p-3 md:rounded border border-blue-chill-300">
+    <div
+      class="
+        group
+        h-screen/2
+        md:h-auto md:row-span-1 md:col-span-4
+        w-full
+        p-3
+        md:rounded
+        border border-blue-chill-300
+        bg-no-repeat bg-cover bg-l
+      "
+      style="background-image: url(/assets/about/about-selfie.jpg)"
+    >
       <!-- ABOUT MAIN -->
       <div *ngIf="currentTab === 'generic'">
         <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
@@ -50,7 +62,7 @@
         md:h-auto
         bg-no-repeat bg-cover bg-center
         w-full
-        bg-korma-400
+        bg-gray-200
         p-5
         md:rounded
         cursor-pointer
@@ -88,7 +100,7 @@
         md:h-auto
         bg-no-repeat bg-cover bg-center
         w-full
-        bg-korma-400
+        bg-gray-200
         p-5
         md:rounded
         cursor-pointer
@@ -126,7 +138,7 @@
         md:h-auto
         bg-no-repeat bg-cover bg-center
         w-full
-        bg-korma-400
+        bg-gray-200
         p-5
         md:rounded
         cursor-pointer
@@ -164,7 +176,7 @@
         md:h-auto
         bg-no-repeat bg-cover bg-center
         w-full
-        bg-korma-400
+        bg-gray-200
         p-5
         md:rounded
         cursor-pointer
