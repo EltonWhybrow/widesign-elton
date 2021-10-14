@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
+  currentTab = 'generic';
+
   constructor() { }
+
+  handleEventClicked(data): void {
+    this.currentTab = data;
+  }
 
   ngOnInit(): void {
   }

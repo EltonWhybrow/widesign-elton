@@ -19,10 +19,13 @@
         bg-no-repeat bg-center
         sm:bg-cover
       "
-      style="background-image: url(/assets/contact/contact-selfie.jpg); background-size: 140%"
     >
+      <!-- style="background-image: url(/assets/contact/contact-selfie.jpg); background-size: 140%" -->
       <div class="p-8">
-        <h1 class="font-extrabold uppercase text-4xl break-all text-white">Contact</h1>
+        <h1 class="font-extrabold uppercase text-4xl break-all text-korma-400">
+          <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
+          >Contact
+        </h1>
         <div
           class="
             transition-opacity
@@ -38,9 +41,10 @@
         >
           Get in touch
         </div>
-        <p class="text-white text-lg py-2">
+        <p class="text-blue-chill-900 text-lg py-2">
           I make web experiences enjoyable and make life easier for end users and your customers, if you need help with your business web
-          requirements or with an individual project, drop me some details and we can start a conversation.
+          requirements or with an individual project, drop me some details and we can start a conversation. See what
+          <a routerLink="/testimonials" class="text-korma-500">people I've worked with say</a> about me.
         </p>
         <p class="flex my-1">
           <a
@@ -52,30 +56,16 @@
             Email me
           </a>
 
-          <!-- <a
-          routerLink="/clients"
-          routerLinkActive="router-link-active"
-          class="
-            rounded-lg
-            p-2
-            px-3
-            m-2
-            text-lg
-            flex-initial
-            text-center text-blue-chill-500
-            border border-blue-chill-500
-            line-through
-            disabled
-          "
-        >
-          Contact form
-        </a> -->
+          <a
+            routerLink="/clients"
+            routerLinkActive="router-link-active"
+            class="rounded-lg p-2 px-3 m-2 text-lg flex-initial text-center text-blue-chill-500 border border-blue-chill-500"
+          >
+            Existing clients
+          </a>
         </p>
 
-        <div class="text-white mt-3">
-          <p class="text-sm py-0">What <a routerLink="/testimonials" class="text-korma-500">people I've worked with say</a> about me.</p>
-          <p class="text-sm py-0">Existing client? Visit <a routerLink="/clients" class="text-korma-500">clients</a> area.</p>
-
+        <div class="text-blue-chill-900 mt-3">
           <p class="text-sm py-0">
             Any recruiters please contact me through
             <a href="https://www.linkedin.com/in/elton-whybrow/" class="text-korma-500">LinkedIn</a>.
@@ -109,7 +99,7 @@
     <app-back-btn class="hidden md:block h-screen/4 md:h-auto"></app-back-btn>
 
     <!-- LOGO -->
-    <app-logo class="hidden md:block border-4 border-blue-chill-500 md:rounded hover:animate-pulse"></app-logo>
+    <app-logo class="hidden md:block border-4 border-blue-chill-500 md:rounded"></app-logo>
 
     <!-- FOOTER -->
     <!-- <app-footer class="md:col-span-5"></app-footer> -->

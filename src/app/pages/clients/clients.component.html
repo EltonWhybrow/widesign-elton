@@ -1,1 +1,177 @@
-<p>clients works!</p>
+<!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
+<div class="min-h-screen md:flex md:flex-column md:justify-center">
+  <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-12">
+    <!-- MOBILE LOGO -->
+    <!-- <app-logo-mobile class="flex h-screen/2 md:h-auto md:hidden border-0 px-2 py-5"></app-logo-mobile> -->
+    <!-- MOBILE LOGO PAGES -->
+    <app-logo-sm class="md:hidden hover:animate-pulse"></app-logo-sm>
+
+    <div
+      class="
+        group
+        h-screen/2
+        md:h-auto md:row-span-1 md:col-span-2
+        w-full
+        p-3
+        md:rounded
+        border border-blue-chill-300
+        bg-no-repeat bg-cover bg-l
+      "
+    >
+      <!-- style="background-image: url(/assets/clients/clients-selfie.jpg)" -->
+      <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>CLIENTS
+      </h1>
+
+      <div
+        class="
+          transition-opacity
+          duration-1000
+          ease-out
+          opacity-0
+          group-hover:opacity-100
+          font-extrabold
+          text-xl text-blue-chill-700
+          break-all
+          pb-3
+        "
+      >
+        Existing
+      </div>
+
+      <p class="text-blue-chill-900 text-sm">
+        We have helped many companies with their branding and creating a identity for them/their business online. Logos and identity can be
+        as important as the quality of the products/service you are trying to sell so don't underestimate their power. We can also theme
+        your new project around any existing branding or logos you have.
+      </p>
+      <p class="text-blue-chill-500 text-xs">
+        Get in
+        <a href="mailto:elton@widesign.co.uk" class="text-korma-500">in touch </a>
+        if you need help with any new or existing project.
+      </p>
+    </div>
+
+    <!-- Development -->
+    <a
+      (click)="currentTab = 'development'"
+      routerLinkActive="active"
+      class="
+        group
+        hover:animate-pulse
+        h-screen/4
+        md:h-auto md:row-span-1 md:col-span-2
+        bg-no-repeat bg-cover bg-center
+        w-full
+        bg-gray-200
+        p-5
+        md:rounded
+        cursor-pointer
+      "
+      style="background-image: url(/assets/dev.jpg)"
+    >
+      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Dev</h1>
+      <div
+        class="
+          transition-opacity
+          duration-1000
+          ease-out
+          opacity-0
+          group-hover:opacity-100
+          font-extrabold
+          text-sm
+          break-all
+          relative
+          bottom-0
+          text-white
+        "
+      >
+        Front to back
+      </div>
+    </a>
+
+    <!-- BACK BTN -->
+    <app-back-btn class="hidden md:block h-screen/4 md:h-auto"></app-back-btn>
+
+    <!-- Design -->
+    <a
+      (click)="currentTab = 'design'"
+      routerLinkActive="active"
+      class="
+        group
+        hover:animate-pulse
+        h-screen/4
+        md:h-auto md:row-span-1 md:col-span-2
+        bg-no-repeat bg-cover bg-center
+        w-full
+        bg-gray-200
+        p-5
+        md:rounded
+        cursor-pointer
+      "
+      style="background-image: url(/assets/design.jpg)"
+    >
+      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Design</h1>
+      <div
+        class="
+          transition-opacity
+          duration-1000
+          ease-out
+          opacity-0
+          group-hover:opacity-100
+          font-extrabold
+          text-sm
+          break-all
+          relative
+          bottom-0
+          text-white
+        "
+      >
+        Make things pretty
+      </div>
+    </a>
+
+    <!-- UX /UI -->
+    <a
+      (click)="currentTab = 'uxui'"
+      routerLinkActive="active"
+      class="
+        group
+        hover:animate-pulse
+        h-screen/4
+        md:row-span-1 md:col-span-2 md:h-auto
+        bg-no-repeat bg-cover bg-center
+        w-full
+        bg-gray-200
+        p-5
+        md:rounded
+        cursor-pointer
+      "
+      style="background-image: url(/assets/uxui.jpg)"
+    >
+      <h1 class="font-extrabold uppercase text-4xl text-white break-all">UI / UX</h1>
+      <div
+        class="
+          transition-opacity
+          duration-1000
+          ease-out
+          opacity-0
+          group-hover:opacity-100
+          font-extrabold
+          text-sm
+          break-all
+          relative
+          bottom-0
+          text-white
+        "
+      >
+        Make life good
+      </div>
+    </a>
+
+    <!-- LOGO -->
+    <app-logo class="hidden md:block border-4 border-blue-chill-500 md:rounded"></app-logo>
+
+    <!-- FOOTER -->
+    <!-- <app-footer class="md:col-span-5"></app-footer> -->
+  </div>
+</div>
