@@ -31,6 +31,11 @@ module.exports = {
             top: '100%',
           },
         },
+        pulse: {
+          '50%': {
+            opacity: '.8',
+          },
+        },
       },
       height: theme => ({
         "screen/2": "50vh",

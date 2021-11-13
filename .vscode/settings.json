@@ -1,0 +1,7 @@
+{
+    "scss.lint.duplicateProperties": "warning",
+    "scss.lint.important": "warning",
+    "scss.lint.unknownAtRules": "ignore",
+    "scss.implicitlyLabel": "",
+    "scss.showErrors": true
+}

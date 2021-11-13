@@ -1,24 +1,36 @@
 <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
   <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>
-  <a (click)="handleMe()" routerLinkActive="active" class="cursor-pointer text-blue-chill-300 hover:text-blue-chill-500">about</a>MORE
+  <a routerLink="/about-us/me" routerLinkActive="active" class="cursor-pointer text-blue-chill-300 hover:text-blue-chill-500">about</a>MORE
 </h1>
 
-<h2>Branding</h2>
-<p class="text-blue-chill-900 text-xs">
-  We have helped many companies with their branding and creating a identity for them/their business online. Logos and identity can be as
-  important as the quality of the products/service you are trying to sell so don't underestimate their power. We can also theme your new
-  project around any existing branding or logos you have.
+<p class="text-blue-chill-900 text-sm mt-1">
+  Complimentary skillset inlcudes photography and branding. Get <a href="mailto:elton@widesign.co.uk" class="text-korma-500">in touch </a>
+  if you want to discuss your requirement or see more on our
+  <a routerLink="/skills" routerLinkActive="router-link-active" class="primary-link">experience in the wild</a>.
 </p>
 
-<h2>Photgraphy</h2>
-<p class="text-blue-chill-900 text-xs">
-  Photography can be some of the modern day designers most important and exciting tools to work with. Doing a shoot for business or just
-  being on site snapping natural shots for a couple of hours can give great a feel for the product or business you promoting. We are happy
-  to take this on at an additional cost to your project.
-</p>
+<div class="flex space-x-10">
+  <div class="mt-1">
+    <h2>Branding</h2>
+    <p class="text-l py-2 leading-5 text-blue-chill-400">
+      We have helped many companies with their branding and creating a identity for them/their business online. Logos and identity can be as
+      important as the quality of the products/service you are trying to sell so don't underestimate their power. We can also theme your new
+      project around any existing branding or logos you have.
+    </p>
+  </div>
 
-<p class="text-blue-chill-900 text-xs">
-  Get in
-  <a href="mailto:elton@widesign.co.uk" class="text-korma-500">in touch </a>
-  if you need help with any new or existing project.
-</p>
+  <div class="mt-1">
+    <h2>Photography</h2>
+    <p class="text-l py-2 leading-5 text-blue-chill-400">
+      Photography can be some of the modern day designers most important and exciting tools to work with. Capturing some honest natural
+      shots or short video of you business or products in action can bring you site together and leave vistors with that warm, fuzzy feeling
+      like they know you. We are happy to take this on at an additional cost to your project.
+    </p>
+  </div>
+</div>
+
+<!-- <p class="flex my-1">
+  <a href="mailto:info@widesign.co.uk?subject=Can you help me? Elton" target="_blank" rel="noopener" class="primary-btn">Get in touch</a>
+
+  <a routerLink="/clients" routerLinkActive="router-link-active" class="secondary-btn"> Existing clients </a>
+</p> -->

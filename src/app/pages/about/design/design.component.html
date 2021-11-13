@@ -1,20 +1,43 @@
 <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
   <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>
-  <a (click)="handleMe()" routerLinkActive="active" class="cursor-pointer text-blue-chill-300 hover:text-blue-chill-500">about</a>Design
+  <a routerLink="/about-us/me" routerLinkActive="active" class="cursor-pointer text-blue-chill-300 hover:text-blue-chill-500">about</a
+  >Design
 </h1>
 
-<p class="text-blue-chill-900 text-xs">
-  Whether its mobile first, responsive or app design, consideration needs to be taken to not overdo it. An intuitive interfaces and clever
-  design compliments the content and draws consumers in.
-</p>
-
-<p class="text-blue-chill-900 text-xs">
-  We use design sparingly and air on the side of caution to not muddy the message and disturb the experience for the end users. Animations
-  are used subtly and were appropriate.
-</p>
-
-<p class="text-blue-chill-900 text-xs">
+<p class="text-blue-chill-900 text-sm mt-1">
+  We use design intelligently and air on the side of caution to not muddy the message and disturb the experience for the end users.
+  Animations are used subtly and were appropriate. An intuitive interface and clever design compliments the content and draws consumers in.
   Get in
   <a href="mailto:elton@widesign.co.uk" class="text-korma-500">in touch </a>
-  if you need help with any new or existing project.
+  if you want to discuss your requirement or see more on our
+  <a routerLink="/skills" routerLinkActive="router-link-active" class="primary-link">experience in the wild</a>.
 </p>
+
+<div class="flex space-x-10">
+  <div class="mt-1">
+    <h2>Concepts</h2>
+    <p class="text-3xl uppercase py-2 leading-7 text-blue-chill-400">
+      <span class="hover:text-korma-400 cursor-pointer font-bold">User-centric</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">White space</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">Devil is in the detail</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">Grids</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">The order of things</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">Problem solving</span>
+    </p>
+  </div>
+
+  <div class="mt-1">
+    <h2>Tooling</h2>
+    <p class="text-3xl uppercase py-2 leading-7 text-blue-chill-400">
+      <span class="hover:text-korma-400 cursor-pointer font-bold">inVision</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">Sketch</span> /
+      <span class="hover:text-korma-400 cursor-pointer font-bold">illustrator</span>
+    </p>
+  </div>
+</div>
+
+<!-- <p class="flex my-1">
+  <a href="mailto:info@widesign.co.uk?subject=Can you help me? Elton" target="_blank" rel="noopener" class="primary-btn">Get in touch</a>
+
+  <a routerLink="/clients" routerLinkActive="router-link-active" class="secondary-btn"> Existing clients </a>
+</p> -->

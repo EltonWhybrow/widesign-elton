@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  currentTab = 'generic';
+  currentTab = 'generic'
+  currentUrl = ''
 
-  constructor() {
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => { event instanceof NavigationEnd ? this.currentUrl = event.url : null })
   }
 
   handleEventClicked(data): void {
@@ -18,5 +21,5 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
+

@@ -20,32 +20,34 @@
     >
       <!-- style="background-image: url(/assets/about/about-selfie.jpg)" -->
       <!-- ABOUT MAIN -->
-      <div *ngIf="currentTab === 'generic'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-me (eventClick)="handleEventClicked($event)"></app-me>
-      </div>
+      <!-- <div *ngIf="currentTab === 'generic'"> -->
+      <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
+      <!-- <app-me (eventClick)="handleEventClicked($event)"></app-me>
+      </div> -->
 
       <!-- DEVELOPMENT -->
-      <div *ngIf="currentTab === 'development'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-dev (eventClick)="handleEventClicked($event)"></app-dev>
-      </div>
+      <!-- <div *ngIf="currentTab === 'development'"> -->
+      <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
+      <!-- <app-dev (eventClick)="handleEventClicked($event)"></app-dev>
+      </div> -->
 
       <!-- DESIGN -->
-      <div *ngIf="currentTab === 'design'">
+      <!-- <div *ngIf="currentTab === 'design'">
         <app-design (eventClick)="handleEventClicked($event)"></app-design>
-      </div>
+      </div> -->
 
       <!-- UX/UI -->
-      <div *ngIf="currentTab === 'uxui'">
+      <!-- <div *ngIf="currentTab === 'uxui'">
         <app-uxui (eventClick)="handleEventClicked($event)"></app-uxui>
-      </div>
+      </div> -->
 
       <!-- MORE... -->
-      <div *ngIf="currentTab === 'more'">
+      <!-- <div *ngIf="currentTab === 'more'">
         <app-more (eventClick)="handleEventClicked($event)"></app-more>
-      </div>
+      </div> -->
+
       <!-- <router-outlet></router-outlet> -->
+      <router-outlet></router-outlet>
     </div>
 
     <!-- BACK BTN -->
@@ -53,20 +55,10 @@
 
     <!-- Development -->
     <a
-      (click)="currentTab = 'development'"
+      routerLink="/about-us/development"
       routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        h-screen/4
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-        cursor-pointer
-      "
+      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
+      [ngClass]="currentUrl === '/about-us/development' ? 'opacity-30' : 'opacity-100'"
       style="background-image: url(/assets/dev.jpg)"
     >
       <h1 class="font-extrabold uppercase text-4xl text-white break-all">Dev</h1>
@@ -91,20 +83,10 @@
 
     <!-- Design -->
     <a
-      (click)="currentTab = 'design'"
+      routerLink="/about-us/design"
       routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        h-screen/4
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-        cursor-pointer
-      "
+      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
+      [ngClass]="currentUrl === '/about-us/design' ? 'opacity-30' : 'opacity-100'"
       style="background-image: url(/assets/design.jpg)"
     >
       <h1 class="font-extrabold uppercase text-4xl text-white break-all">Design</h1>
@@ -129,23 +111,13 @@
 
     <!-- UX /UI -->
     <a
-      (click)="currentTab = 'uxui'"
+      routerLink="/about-us/ux-ui"
       routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        h-screen/4
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-        cursor-pointer
-      "
+      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
+      [ngClass]="currentUrl === '/about-us/ux-ui' ? 'opacity-30' : 'opacity-100'"
       style="background-image: url(/assets/uxui.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">UI / UX</h1>
+      <h1 class="font-extrabold uppercase text-4xl text-white break-all">UX/UI {{ currentUrl }}</h1>
       <div
         class="
           transition-opacity
@@ -167,20 +139,10 @@
 
     <!-- More -->
     <a
-      (click)="currentTab = 'more'"
+      routerLink="/about-us/more"
       routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        h-screen/4
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-        cursor-pointer
-      "
+      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
+      [ngClass]="currentUrl === '/about-us/more' ? 'opacity-30' : 'opacity-100'"
       style="background-image: url(/assets/more.jpg)"
     >
       <h1 class="font-extrabold uppercase text-4xl text-white break-all">More</h1>
@@ -204,7 +166,7 @@
     </a>
 
     <!-- LOGO -->
-    <app-logo class="hidden md:block border-4 border-blue-chill-500 md:rounded"></app-logo>
+    <app-logo class="hidden md:block border border-blue-chill-300 md:rounded"></app-logo>
 
     <!-- FOOTER -->
     <!-- <app-footer class="md:col-span-5"></app-footer> -->

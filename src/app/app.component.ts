@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import {
   Event,
   NavigationCancel,
@@ -6,7 +6,7 @@ import {
   NavigationError,
   NavigationStart,
   Router
-} from '@angular/router';
+} from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -14,32 +14,33 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'widesign-elton';
+  title = 'widesign-elton'
 
-  loading = false;
+  loading = false
 
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
+      console.log(event)
       switch (true) {
         case event instanceof NavigationStart: {
-          this.loading = true;
-          break;
+          this.loading = true
+          break
         }
 
         case event instanceof NavigationEnd:
         case event instanceof NavigationCancel:
         case event instanceof NavigationError: {
           setTimeout(() => {
-            console.log('Hello from setTimeout');
+            console.log('Hello from setTimeout')
             this.loading = false;
-          }, 1500);
-          break;
+          }, 1500)
+          break
         }
         default: {
-          break;
+          break
         }
       }
-    });
+    })
   }
 
 }

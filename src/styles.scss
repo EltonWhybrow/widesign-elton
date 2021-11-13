@@ -3,9 +3,38 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 body {
-  // @apply bg-blue-chill-200;
+  // @apply bg-korma-500;
+  // @apply bg-blue-chill-100;
+  // @apply bg-raw-sienna-500;
+}
+
+h2 {
+  @apply text-2xl font-semibold text-white mt-2 px-2 bg-blue-chill-500 rounded inline-block;
+}
+
+h3 {
+  @apply text-blue-chill-900;
+}
+
+p {
+  @apply text-blue-chill-700;
+}
+
+.primary-link {
+  @apply text-korma-400 hover:text-korma-500 whitespace-nowrap underline;
+}
+
+.secondary-link {
+  @apply text-gray-400 hover:text-gray-500 whitespace-nowrap;
+}
+
+.primary-btn {
+  @apply rounded flex-initial p-2 px-3 my-2 text-lg text-center bg-blue-chill-500 hover:bg-blue-chill-600 text-white;
+}
+
+.secondary-btn {
+  @apply rounded p-2 px-3 m-2 text-lg flex-initial text-center text-blue-chill-400 hover:text-blue-chill-600 border border-blue-chill-400 hover:border-blue-chill-600;
 }
 
 // Logo ani
@@ -17,21 +46,21 @@ body {
 }
 
 @keyframes dash {
-0% {
+  0% {
     stroke-dashoffset: 0;
-     stroke-dasharray: 500;
-     stroke-opacity: 100%;
-     fill: #0d888c;
+    stroke-dasharray: 500;
+    stroke-opacity: 100%;
+    fill: #0d888c;
   }
+
   5% {
     fill: white;
   }
+
   100% {
     stroke-dashoffset: 800;
-     stroke-dasharray: 800;
-     stroke-opacity: 0%;
-     fill: white;
-
+    stroke-dasharray: 800;
+    stroke-opacity: 0%;
+    fill: white;
   }
 }
-

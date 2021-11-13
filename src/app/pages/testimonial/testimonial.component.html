@@ -13,7 +13,6 @@
       class="
         group
         hover:animate-pulse
-        h-screen
         md:h-auto
         bg-no-repeat bg-cover bg-center
         cursor-pointer
@@ -24,7 +23,7 @@
       "
       style="background-image: url(/assets/testimonials/btroofing.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">BT <br />Roofing</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">BT <br class="hidden md:inline-block" />Roofing</h1>
       <div
         class="
           transition-opacity
@@ -51,7 +50,6 @@
       class="
         group
         hover:animate-pulse
-        h-screen
         md:h-auto
         bg-no-repeat bg-cover bg-center
         cursor-pointer
@@ -62,7 +60,7 @@
       "
       style="background-image: url(/assets/testimonials/spares4mowers.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">Spares 4 <br />Mowers</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">Spares 4 <br class="hidden md:inline-block" />Mowers</h1>
       <div
         class="
           transition-opacity
@@ -84,6 +82,8 @@
 
     <div
       class="
+        hidden
+        md:block
         relative
         group
         md:h-auto md:row-span-2 md:col-span-2
@@ -135,7 +135,6 @@
       class="
         group
         hover:animate-pulse
-        h-screen
         md:h-auto
         bg-no-repeat bg-cover bg-center
         cursor-pointer
@@ -146,7 +145,7 @@
       "
       style="background-image: url(/assets/testimonials/flashlight.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">Flashlight <br />Photography</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">Flashlight <br class="hidden md:inline-block" />Photography</h1>
       <div
         class="
           transition-opacity
@@ -173,7 +172,6 @@
       class="
         group
         hover:animate-pulse
-        h-screen
         md:h-auto
         bg-no-repeat bg-cover bg-center
         cursor-pointer
@@ -184,7 +182,7 @@
       "
       style="background-image: url(/assets/testimonials/budlandscapes.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">Bud <br />Landscapes</h1>
+      <h1 class="font-extrabold uppercase text-xl text-white break-all">Bud <br class="hidden md:inline-block" />Landscapes</h1>
       <div
         class="
           transition-opacity
@@ -204,8 +202,52 @@
       </div>
     </a>
 
+    <div
+      class="
+        md:hidden
+        relative
+        group
+        md:h-auto md:row-span-2 md:col-span-2
+        w-full
+        p-3
+        md:rounded md:border
+        border-blue-chill-300
+        bg-no-repeat bg-cover bg-center
+      "
+      style="background-image: url(/assets/testimonials/testimonial-selfie.jpg)"
+    >
+      <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
+        >Testimonials
+      </h1>
+      <!-- <p class="text-white">Restoring faith in humanity, one perosn at a time.</p> -->
+      <!-- btroofing -->
+      <div *ngIf="currentTab === 'btroofing'">
+        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
+        <app-btroofing (eventClick)="handleEventClicked($event)"></app-btroofing>
+      </div>
+
+      <!--  budlandscapes -->
+      <div *ngIf="currentTab === 'budlandscapes'">
+        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
+        <app-budlandscapes (eventClick)="handleEventClicked($event)"></app-budlandscapes>
+      </div>
+
+      <!--  spares4mowers -->
+      <div *ngIf="currentTab === 'spares4mowers'">
+        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
+        <app-spares4mowers (eventClick)="handleEventClicked($event)"></app-spares4mowers>
+      </div>
+
+      <!--  flashlight -->
+      <div *ngIf="currentTab === 'flashlight'">
+        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
+        <app-flashlight (eventClick)="handleEventClicked($event)"></app-flashlight>
+      </div>
+    </div>
+
     <!-- LOGO -->
-    <app-logo class="hidden md:block border-4 border-blue-chill-500 md:rounded"></app-logo>
+    <app-logo class="hidden md:block border border-blue-chill-300 md:rounded"></app-logo>
 
     <!-- FOOTER -->
     <!-- <app-footer class="md:col-span-5"></app-footer> -->

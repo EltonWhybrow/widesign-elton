@@ -10,12 +10,12 @@ export class UxuiComponent implements OnInit {
   constructor() { }
 
   // @Input() event: any;
-  event: string;
-  @Output() eventClick = new EventEmitter();
+  event: string
+  @Output() eventClick = new EventEmitter()
 
   handleMe(): void {
-    this.event = 'generic';
-    this.eventClick.emit(this.event);
+    this.event = 'generic'
+    this.eventClick.emit(this.event)
     // console.log('', this.event);
   }
 
