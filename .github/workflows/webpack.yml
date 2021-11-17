@@ -22,10 +22,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install packages & build ssr ng app
+    - name: Install packages & build ssr/prod ng app
       run: |
         npm install
-        npm run build:ssr
+        npm run build:prod
         ls
         
     - name: Archive production artifacts
@@ -33,12 +33,23 @@ jobs:
       with:
         name: dist-folder
         path: |
-          dist
+          dist/widesign-elton/browser
 
   deployment:
+    needs: build
     runs-on: ubuntu-latest
     environment: production
     concurrency: production
     steps:
+      - name: Download dist folder
+        uses: actions/download-artifact@v2
+        with:
+          name: dist-folder
+          
       - name: deploy
         run: ls
+        
+      - shell: bash
+        run: |
+          ls
+
