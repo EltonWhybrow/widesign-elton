@@ -47,7 +47,12 @@ jobs:
           name: dist-folder
           
       - name: deploy
-        run: ls
+        run: |
+          ls
+          git init
+          git config user.email "whybrow.elton@gmail.com"
+          git config user.name "Elton Whybrow"
+          git add -A && git commit -m "Add compiled build to git"
         
       - shell: bash
         run: |
