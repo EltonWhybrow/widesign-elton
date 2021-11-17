@@ -26,3 +26,12 @@ jobs:
       run: |
         npm install
         npm run build:ssr
+        ls
+
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
+    steps:
+      - name: deploy
+        run: ls
