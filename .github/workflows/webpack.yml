@@ -54,13 +54,6 @@ jobs:
           git config user.name "Elton Whybrow"
           git add -A && git commit -m "Add compiled build to git"
           ls
-          
-      - uses: actions/checkout@v1
-      - name: git-ftp push
-        uses: sebastianpopp/git-ftp-action@releases/v3
-        with:
-          url: "ftp://ftps3.uk.cloudlogin.co"
-          user: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PWD }}
+          git ftp push --force --user ${{ secrets.FTP_USER }} --passwd ${{ secrets.FTP_PWD }} ftp://ftps3.uk.cloudlogin.co
         
 
