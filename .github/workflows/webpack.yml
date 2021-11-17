@@ -27,6 +27,13 @@ jobs:
         npm install
         npm run build:ssr
         ls
+        
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-folder
+        path: |
+          dist
 
   deployment:
     runs-on: ubuntu-latest
