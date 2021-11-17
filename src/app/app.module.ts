@@ -9,15 +9,16 @@ import { SkillsComponent } from './pages/skills/skills.component'
 import { ClientsComponent } from './pages/clients/clients.component'
 import { TestimonialComponent } from './pages/testimonial/testimonial.component'
 import { SharedModule } from './shared/shared.module'
-import { DesignComponent } from './pages/about/design/design.component'
-import { DevComponent } from './pages/about/dev/dev.component'
-import { UxuiComponent } from './pages/about/uxui/uxui.component'
-import { MoreComponent } from './pages/about/more/more.component'
-import { MeComponent } from './pages/about/me/me.component'
+import { DesignComponent } from './pages/skills/design/design.component'
+import { DevComponent } from './pages/skills/dev/dev.component'
+import { UxuiComponent } from './pages/skills/uxui/uxui.component'
+import { MoreComponent } from './pages/skills/more/more.component'
+import { MeComponent } from './pages/skills/me/me.component'
 import { BudlandscapesComponent } from './pages/testimonial/budlandscapes/budlandscapes.component'
 import { BtroofingComponent } from './pages/testimonial/btroofing/btroofing.component'
 import { Spares4mowersComponent } from './pages/testimonial/spares4mowers/spares4mowers.component'
 import { FlashlightComponent } from './pages/testimonial/flashlight/flashlight.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { FlashlightComponent } from './pages/testimonial/flashlight/flashlight.c
     Spares4mowersComponent,
     FlashlightComponent
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, SharedModule],
+  imports: [BrowserAnimationsModule, BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })

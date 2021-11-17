@@ -6,62 +6,68 @@
     <!-- MOBILE LOGO PAGES -->
     <app-logo-sm class="md:hidden hover:animate-pulse"></app-logo-sm>
 
-    <div
-      class="
-        group
-        h-screen/2
-        md:h-auto md:row-span-1 md:col-span-4
-        w-full
-        p-3
-        md:rounded
-        border border-blue-chill-300
-        bg-no-repeat bg-cover bg-l
-      "
-    >
-      <!-- style="background-image: url(/assets/about/about-selfie.jpg)" -->
-      <!-- ABOUT MAIN -->
-      <!-- <div *ngIf="currentTab === 'generic'"> -->
-      <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-      <!-- <app-me (eventClick)="handleEventClicked($event)"></app-me>
-      </div> -->
+    <div class="group md:h-auto md:row-span-1 md:col-span-4 w-full p-3 md:rounded border border-blue-chill-300 bg-no-repeat bg-cover bg-l">
+      <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>about
+      </h1>
 
-      <!-- DEVELOPMENT -->
-      <!-- <div *ngIf="currentTab === 'development'"> -->
-      <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-      <!-- <app-dev (eventClick)="handleEventClicked($event)"></app-dev>
-      </div> -->
+      <p class="text-sm py-2">
+        Hiya, I'm Elton!<br />
+        Im a Web developer with varied <span class="font-bold">development/design experience</span> spanning
+        <a
+          href="http://web.archive.org/web/20070329040205/http://www.widesign.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="primary-link"
+          >over 2 decades</a
+        >. Worked in the <span class="font-bold">insurance sector</span> for most of my coroprotae life but before all that I was self
+        employed helping <span class="font-bold">start-ups and small businesses</span> to gain a web presence and market their
+        products/skills.
+      </p>
+      <p class="text-sm py-2">
+        I live near sunny <span class="italic">wink emoji</span> Reigate, Surrey in the UK with my wife and 2 young daughters. I have had
+        many hobbies/obsessions over my years from sponsored skateboarder to learning the guitar.
+        <!-- Cut my teeth building a
+        <a
+          href="http://web.archive.org/web/20060813205737/http://www.wyzthreadz.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="primary-link"
+          >Urban clothing store</a
+        >
+        back in the early days to learn the basics and remeber too well the pain of fixing bugs in earlier IE browsers. Thanks heavens they
+        are a things of the past. Current day job is a wide range of development tasks for an small but growing telematics car insurance
+        firm. -->
+      </p>
+      <p class="flex my-1">
+        <a href="mailto:info@widesign.co.uk?subject=Can you help me? Elton" target="_blank" rel="noopener" class="primary-btn"
+          >Get in touch</a
+        >
 
-      <!-- DESIGN -->
-      <!-- <div *ngIf="currentTab === 'design'">
-        <app-design (eventClick)="handleEventClicked($event)"></app-design>
-      </div> -->
-
-      <!-- UX/UI -->
-      <!-- <div *ngIf="currentTab === 'uxui'">
-        <app-uxui (eventClick)="handleEventClicked($event)"></app-uxui>
-      </div> -->
-
-      <!-- MORE... -->
-      <!-- <div *ngIf="currentTab === 'more'">
-        <app-more (eventClick)="handleEventClicked($event)"></app-more>
-      </div> -->
-
-      <!-- <router-outlet></router-outlet> -->
-      <router-outlet></router-outlet>
+        <a routerLink="/clients" routerLinkActive="router-link-active" class="secondary-btn"> Existing client? </a>
+      </p>
     </div>
 
     <!-- BACK BTN -->
     <app-back-btn class="hidden md:block h-screen/4 md:h-auto"></app-back-btn>
 
-    <!-- Development -->
-    <a
-      routerLink="/about-us/development"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/about-us/development' ? 'opacity-30' : 'opacity-100'"
-      style="background-image: url(/assets/dev.jpg)"
+    <!-- Family photo -->
+    <div
+      class="
+        group
+        h-screen/4
+        md:h-auto md:row-span-1 md:col-span-4
+        bg-no-repeat bg-cover bg-center
+        w-full
+        bg-gray-200
+        p-5
+        md:rounded
+        cursor-pointer
+      "
+      style="background-image: url(/assets/about/family.jpg)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Dev</h1>
+      <!-- {{ currentUrl }} -->
+      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Familia</h1>
       <div
         class="
           transition-opacity
@@ -77,93 +83,9 @@
           text-white
         "
       >
-        Front to back
+        Makes life good
       </div>
-    </a>
-
-    <!-- Design -->
-    <a
-      routerLink="/about-us/design"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/about-us/design' ? 'opacity-30' : 'opacity-100'"
-      style="background-image: url(/assets/design.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Design</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Make things pretty
-      </div>
-    </a>
-
-    <!-- UX /UI -->
-    <a
-      routerLink="/about-us/ux-ui"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/about-us/ux-ui' ? 'opacity-30' : 'opacity-100'"
-      style="background-image: url(/assets/uxui.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">UX/UI {{ currentUrl }}</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Make life good
-      </div>
-    </a>
-
-    <!-- More -->
-    <a
-      routerLink="/about-us/more"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/about-us/more' ? 'opacity-30' : 'opacity-100'"
-      style="background-image: url(/assets/more.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">More</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Helpers
-      </div>
-    </a>
+    </div>
 
     <!-- LOGO -->
     <app-logo class="hidden md:block border border-blue-chill-300 md:rounded"></app-logo>

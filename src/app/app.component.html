@@ -1,4 +1,4 @@
-<div
+<!-- <div
   class="
     flex
     justify-center
@@ -16,7 +16,7 @@
   "
   *ngIf="loading"
 >
-  <!-- <p class="text-white text-3xl">LOADING</p> -->
+
   <div class="relative h-28 w-28">
     <div
       class="
@@ -57,5 +57,7 @@
       </g>
     </svg>
   </div>
-</div>
-<router-outlet></router-outlet>
+</div> -->
+<main [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>

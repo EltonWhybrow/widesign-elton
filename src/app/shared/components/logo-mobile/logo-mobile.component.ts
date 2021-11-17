@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logo-mobile',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoMobileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  // goToUrl(url: string): any {
+  //   this.router.navigate(['/' + url])
+  // }
 
   ngOnInit(): void {
   }

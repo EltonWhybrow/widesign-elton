@@ -9,6 +9,10 @@ body {
   // @apply bg-raw-sienna-500;
 }
 
+main {
+  position: relative;
+}
+
 h2 {
   @apply text-2xl font-semibold text-white mt-2 px-2 bg-blue-chill-500 rounded inline-block;
 }

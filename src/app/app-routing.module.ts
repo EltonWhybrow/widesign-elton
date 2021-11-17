@@ -6,32 +6,37 @@ import { ErrorComponent } from './pages/error/error.component'
 import { SkillsComponent } from './pages/skills/skills.component'
 import { ClientsComponent } from './pages/clients/clients.component'
 import { TestimonialComponent } from './pages/testimonial/testimonial.component'
-import { DevComponent } from './pages/about/dev/dev.component'
-import { DesignComponent } from './pages/about/design/design.component'
-import { MeComponent } from './pages/about/me/me.component'
-import { UxuiComponent } from './pages/about/uxui/uxui.component'
-import { MoreComponent } from './pages/about/more/more.component'
+import { DevComponent } from './pages/skills/dev/dev.component'
+import { DesignComponent } from './pages/skills/design/design.component'
+import { MeComponent } from './pages/skills/me/me.component'
+import { UxuiComponent } from './pages/skills/uxui/uxui.component'
+import { MoreComponent } from './pages/skills/more/more.component'
 
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, data: { animationState: 'home' } },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'skills', component: SkillsComponent },
+  {
+    path: 'skills',
+    component: SkillsComponent,
+    data: { animationState: 'skills' },
+    children: [
+      { path: 'me', component: MeComponent, data: { animationState: 'me' } },
+      { path: '', pathMatch: 'full', redirectTo: 'me' },
+      { path: 'development', component: DevComponent, data: { animationState: 'development' } },
+      { path: 'design', component: DesignComponent, data: { animationState: 'design' } },
+      { path: 'ux-ui', component: UxuiComponent, data: { animationState: 'ux-ui' } },
+      { path: 'more', component: MoreComponent, data: { animationState: 'more' } },
+    ]
+  },
   {
     path: 'about-us',
     component: AboutComponent,
-    children: [
-      { path: 'me', component: MeComponent },
-      { path: '', pathMatch: 'full', redirectTo: 'me' },
-      { path: 'development', component: DevComponent },
-      { path: 'design', component: DesignComponent },
-      { path: 'ux-ui', component: UxuiComponent },
-      { path: 'more', component: MoreComponent },
-    ]
+    data: { animationState: 'about-us' }
   },
-  { path: 'testimonials', component: TestimonialComponent },
-  { path: 'clients', component: ClientsComponent },
+  { path: 'testimonials', component: TestimonialComponent, data: { animationState: 'testimonials' } },
+  { path: 'clients', component: ClientsComponent, data: { animationState: 'clients' } },
   {
     path: 'contact-us',
     loadChildren: () =>
@@ -41,9 +46,11 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-  })],
+  imports: [RouterModule.forRoot(routes,
+    {
+      initialNavigation: 'enabled',
+      scrollPositionRestoration: 'enabled'
+    })],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

@@ -13,9 +13,9 @@ export class LogoSmComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  takeMeHome(): any {
-    this.router.navigate(['/'])
-  }
+  // takeMeHome(): any {
+  //   this.router.navigate(['/'])
+  // }
 
 
 }

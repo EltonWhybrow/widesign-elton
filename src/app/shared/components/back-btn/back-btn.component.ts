@@ -10,9 +10,9 @@ export class BackBtnComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  backToHome(): any {
-    this.router.navigate(['/'])
-  }
+  // backToHome(): any {
+  //   this.router.navigate(['/'])
+  // }
 
   ngOnInit(): void {
   }
