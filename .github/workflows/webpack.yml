@@ -54,6 +54,6 @@ jobs:
           git config user.name "Elton Whybrow"
           git add -A && git commit -m "Add compiled build to git"
           ls
-          git ftp push init --force --user ${{ secrets.FTP_USER }} --passwd ${{ secrets.FTP_PWD }} ftp://ftps3.uk.cloudlogin.co
+          git ftp init --force --user ${{ secrets.FTP_USER }} --passwd ${{ secrets.FTP_PWD }} ftp://ftps3.uk.cloudlogin.co
         
 
