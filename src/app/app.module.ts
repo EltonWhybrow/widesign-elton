@@ -43,7 +43,12 @@ import { environment } from '../environments/environment'
     Spares4mowersComponent,
     FlashlightComponent
   ],
-  imports: [BrowserAnimationsModule, BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, SharedModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent]
 })
