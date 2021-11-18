@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { HashLocationStrategy, LocationStrategy } from '@angular/common'
+import { LocationStrategy, PathLocationStrategy } from '@angular/common'
 import { HomeComponent } from './pages/home/home.component'
 import { AboutComponent } from './pages/about/about.component'
 import { ErrorComponent } from './pages/error/error.component'
@@ -42,7 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     FlashlightComponent
   ],
   imports: [BrowserAnimationsModule, BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, SharedModule],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
