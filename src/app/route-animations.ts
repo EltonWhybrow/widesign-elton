@@ -14,22 +14,28 @@ export const fader =
           left: 0,
           width: '100%'
         })
-      ]),
+      ],
+        { optional: true }),
       query(':enter', [style({
         // left: '-100%',
         opacity: 0
-      })]),
-      query(':leave', animateChild()),
+      })],
+        { optional: true }),
+      query(':leave', animateChild(),
+        { optional: true }),
       group([
         query(':leave', [animate('.4s ease-out', style({
           // left: '100%',
           opacity: 0
-        }))]),
+        }))],
+          { optional: true }),
         query(':enter', [animate('.4s ease-out', style({
           // left: '0%',
           opacity: 1
-        }))])
+        }))],
+          { optional: true })
       ]),
-      query(':enter', animateChild())
+      query(':enter', animateChild(),
+        { optional: true })
     ])
   ])
