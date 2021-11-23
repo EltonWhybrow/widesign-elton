@@ -5,7 +5,7 @@
   overflow: none;
   width: 100%;
   z-index: 1000;
-  transform: translateY(100%); /*change here related your menu height*/
+  transform: translateY(-100%); /*change here related your menu height*/
 }
 .main-content-wrapper a {
   display: block;
