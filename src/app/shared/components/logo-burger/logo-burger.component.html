@@ -9,28 +9,8 @@
     <div id="sidebarMenu">
       <div class="main-content-wrapper bg-blue-chill-400 text-white h-full pt-3">
         <a routerLink="/" routerLinkActive="router-link-active" class="p-3 w-full text-xl">Home</a>
-        <!-- clients -->
-        <a *ngIf="routerUrl != '/clients'" routerLink="/clients" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
-          >Clients</a
-        >
-        <label
-          *ngIf="routerUrl == '/clients'"
-          for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Existing Client</label
-        >
-        <!-- about -->
-        <a *ngIf="routerUrl != '/about-us'" routerLink="/about-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
-          >About</a
-        >
-        <label
-          *ngIf="routerUrl == '/about-us'"
-          for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >About</label
-        >
 
-        <!-- skills -->
+        <!-- services -->
         <a *ngIf="routerUrl != '/skills/me'" routerLink="/skills/me" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
           >Services</a
         >
@@ -38,27 +18,8 @@
           *ngIf="routerUrl == '/skills/me'"
           for="openSidebarMenu"
           class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Services</label
-        >
-
-        <!-- resume -->
-        <a
-          href="https://drive.google.com/file/d/1kxmPTJPk_RUZv6ktXIkvw7_A1c0EMYp8/view?usp=sharing"
-          target="_blank"
-          rel="noopener"
-          class="p-3 w-full text-xl"
-          >Resume</a
-        >
-        <!-- contact -->
-        <a *ngIf="routerUrl != '/contact-us'" routerLink="/contact-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
-          >Contact Us</a
-        >
-        <label
-          *ngIf="routerUrl == '/contact-us'"
-          for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Contact</label
-        >
+          >Services <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+        ></label>
 
         <!-- testimonials -->
         <a *ngIf="routerUrl != '/testimonials'" routerLink="/testimonials" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
@@ -68,8 +29,50 @@
           *ngIf="routerUrl == '/testimonials'"
           for="openSidebarMenu"
           class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Testimonials</label
+          >Testimonials <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+        ></label>
+
+        <!-- about -->
+        <a *ngIf="routerUrl != '/about-us'" routerLink="/about-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >About</a
         >
+        <label
+          *ngIf="routerUrl == '/about-us'"
+          for="openSidebarMenu"
+          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
+          >About <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+        ></label>
+
+        <!-- resume -->
+        <a
+          href="https://drive.google.com/file/d/1kxmPTJPk_RUZv6ktXIkvw7_A1c0EMYp8/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          class="p-3 w-full text-xl"
+          >Resume</a
+        >
+
+        <!-- clients -->
+        <a *ngIf="routerUrl != '/clients'" routerLink="/clients" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >Clients</a
+        >
+        <label
+          *ngIf="routerUrl == '/clients'"
+          for="openSidebarMenu"
+          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
+          >Clients <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span>
+        </label>
+
+        <!-- contact -->
+        <a *ngIf="routerUrl != '/contact-us'" routerLink="/contact-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >Contact Us</a
+        >
+        <label
+          *ngIf="routerUrl == '/contact-us'"
+          for="openSidebarMenu"
+          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
+          >Contact <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+        ></label>
       </div>
     </div>
   </div>

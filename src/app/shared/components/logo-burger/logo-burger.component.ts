@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-logo-sm',
-  templateUrl: './logo-sm.component.html',
-  styleUrls: ['./logo-sm.component.scss']
+  selector: 'app-logo-burger',
+  templateUrl: './logo-burger.component.html',
+  styleUrls: ['./logo-burger.component.scss']
 })
-export class LogoSmComponent implements OnInit {
+export class LogoBurgerComponent implements OnInit {
 
   routerUrl: any
 
