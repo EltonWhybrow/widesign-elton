@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import {
   Event,
   NavigationCancel,
@@ -9,6 +9,7 @@ import {
   RouterOutlet
 } from '@angular/router'
 import { fader } from './route-animations'
+import { Title, Meta } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-root',
@@ -16,12 +17,12 @@ import { fader } from './route-animations'
   styleUrls: ['./app.component.scss'],
   animations: [fader],
 })
-export class AppComponent {
-  title = 'widesign-elton'
+export class AppComponent implements OnInit {
+  title = 'Home - Design & Development - WideSign'
 
   loading = false
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private titleService: Title, private metaService: Meta) {
     // this.router.events.subscribe((event: Event) => {
     //   console.log(event)
     //   switch (true) {
@@ -50,6 +51,15 @@ export class AppComponent {
     return outlet &&
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animationState'];
+  }
+
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title);
+    this.metaService.addTags([
+      { name: 'keywords', content: 'Development, Desgin, Web Design, Hosting' },
+      { name: 'description', content: 'Custom Development and Design in the Redhill and Reigate Surrey' },
+      { name: 'robots', content: 'index, follow' }
+    ])
   }
 
 }
