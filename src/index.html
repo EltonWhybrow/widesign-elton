@@ -5,8 +5,8 @@
     <title>Design & Development - WideSign - Redhill && Reigate</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png" />
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png" /> -->
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" /> -->
@@ -27,21 +27,34 @@
     </script>
 
     <script>
+      // if ("serviceWorker" in navigator) {
+      //   window.addEventListener("load", function () {
+      //     navigator.serviceWorker.register("/ngsw-worker.js").then(
+      //       function (registration) {
+      //         // Registration was successful
+      //         console.log("ServiceWorker registration successful with scope: ", registration.scope);
+      //       },
+      //       function (err) {
+      //         // registration failed :(
+      //         console.log("ServiceWorker registration failed: ", err);
+      //       }
+      //     );
+      //   });
+      // }
       if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker.register("/ngsw-worker.js").then(
-            function (registration) {
-              // Registration was successful
-              console.log("ServiceWorker registration successful with scope: ", registration.scope);
-            },
-            function (err) {
-              // registration failed :(
-              console.log("ServiceWorker registration failed: ", err);
-            }
-          );
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/ngsw-worker.js")
+            .then((reg) => {
+              console.log("Registration succeeded. Scope is " + reg.scope);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
         });
       }
     </script>
+
     <!-- End Google Tag Manager -->
   </head>
   <body>
