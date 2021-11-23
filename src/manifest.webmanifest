@@ -1,11 +1,11 @@
 {
   "name": "WideSign - Design & Development",
   "short_name": "WideSign",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#9ecfd1",
+  "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "http://staging.widesign.co.uk/",
-  "start_url": "http://staging.widesign.co.uk/",
+  "scope": "/",
+  "start_url": "/home",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
