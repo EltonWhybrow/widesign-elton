@@ -13,21 +13,24 @@
         group
         md:h-auto md:row-span-2 md:col-span-4
         w-full
-        md:rounded
-        border border-blue-chill-300
+        md:rounded md:border
+        border-blue-chill-300
         p-0
         bg-no-repeat bg-center
         sm:bg-cover
       "
     >
       <!-- style="background-image: url(/assets/contact/contact-selfie.jpg); background-size: 140%" -->
-      <div class="p-8">
+      <div class="p-6">
         <h1 class="font-extrabold uppercase text-4xl break-all text-korma-400">
           <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
           >Contact
         </h1>
+        <div class="md:hidden block font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Get in touch</div>
         <div
           class="
+            hidden
+            md:block
             transition-opacity
             duration-1000
             ease-out
@@ -67,7 +70,7 @@
         </div>
       </div>
 
-      <div class="md:absolute w-full bottom-0 p-8 bg-blue-chill-300 bg-opacity-50">
+      <div class="md:absolute w-full bottom-0 p-6 bg-blue-chill-300 bg-opacity-50">
         <h3 class="text-xl mb-1 font-bold">Get a head start!</h3>
         <p class="text-sm pb-6 leading-relaxed">
           Search for your available

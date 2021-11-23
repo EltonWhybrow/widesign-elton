@@ -6,12 +6,32 @@
     <!-- MOBILE LOGO PAGES -->
     <app-logo-sm class="md:hidden"></app-logo-sm>
 
-    <div class="group md:h-auto md:row-span-1 md:col-span-4 w-full p-3 md:rounded border border-blue-chill-300 bg-no-repeat bg-cover bg-l">
+    <div
+      class="group md:h-auto md:row-span-1 md:col-span-4 w-full p-6 md:rounded md:border border-blue-chill-300 bg-no-repeat bg-cover bg-l"
+    >
       <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
         <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>about
       </h1>
+      <div class="md:hidden block font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Who your hiring</div>
+      <div
+        class="
+          hidden
+          md:block
+          transition-opacity
+          duration-1000
+          ease-out
+          opacity-0
+          group-hover:opacity-100
+          font-extrabold
+          text-2xl text-blue-chill-700
+          break-all
+          pb-3
+        "
+      >
+        Who your hiring
+      </div>
 
-      <p class="text-sm py-2">
+      <p class="text-lg py-2">
         Hiya, I'm Elton!<br />
         Im a Web developer with varied <span class="font-bold">development/design experience</span> spanning
         <a
@@ -24,7 +44,7 @@
         employed helping <span class="font-bold">start-ups and small businesses</span> to gain a web presence and market their
         products/skills.
       </p>
-      <p class="text-sm py-2">
+      <p class="text-lg py-2">
         I live near sunny <span class="italic">wink emoji</span> Reigate, Surrey in the UK with my wife and 2 young daughters. I have had
         many hobbies/obsessions over my years from sponsored skateboarder to learning the guitar.
         <!-- Cut my teeth building a
