@@ -47,23 +47,13 @@
         Dont be afraid to <a routerLink="/contact-us" class="primary-link">ask for help</a> if you still having problems.
       </p>
       <p class="text-xs absolute bottom-0 right-2 py-1">
-        <a routerLink="/skills" class="secondary-link">Not a client yet?</a>
+        <a routerLink="/services" class="secondary-link">Not a client yet?</a>
       </p>
     </div>
 
     <!-- Hosting Account Login -->
     <div
-      class="
-        relative
-        group
-        h-screen/2
-        md:h-auto md:row-span-1 md:col-span-2
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-      "
+      class="relative group md:h-auto md:row-span-1 md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
       style="background-image: url(/assets/clients/client-account.jpg)"
     >
       <h1 class="font-extrabold uppercase text-3xl text-white break-all">Hosting account</h1>
@@ -96,21 +86,11 @@
     </div>
 
     <!-- BACK BTN -->
-    <app-back-btn class="hidden md:block h-screen/2 md:h-auto"></app-back-btn>
+    <app-back-btn class="hidden md:block md:h-auto"></app-back-btn>
 
     <!-- Webmail -->
     <div
-      class="
-        relative
-        group
-        h-screen/2
-        md:h-auto md:row-span-1 md:col-span-2
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-      "
+      class="relative group md:h-auto md:row-span-1 md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
       style="background-image: url(/assets/clients/client-webmail.jpg)"
     >
       <h1 class="font-extrabold uppercase text-3xl text-white break-all">Webmail</h1>
@@ -145,19 +125,47 @@
       </p>
     </div>
 
-    <!-- NEW project -->
     <div
       class="
+        block
+        md:hidden
         relative
         group
-        h-screen/2
-        md:row-span-1 md:col-span-2 md:h-auto
-        bg-no-repeat bg-cover bg-center
+        md:h-auto md:row-span-1 md:col-span-2
         w-full
-        bg-gray-200
-        p-5
-        md:rounded
+        p-6
+        md:rounded md:border
+        border-blue-chill-300
+        bg-no-repeat bg-cover bg-l
       "
+    >
+      <!-- style="background-image: url(/assets/clients/clients-selfie.jpg)" -->
+      <h1 class="font-extrabold uppercase text-4xl md:text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>CLIENTS
+      </h1>
+      <div class="md:hidden block font-extrabold text-2xl text-blue-chill-700 break-all pb-3">New</div>
+      <div
+        class="
+          hidden
+          md:block
+          transition-opacity
+          duration-1000
+          ease-out
+          opacity-0
+          group-hover:opacity-100
+          font-extrabold
+          text-2xl text-blue-chill-700
+          break-all
+          pb-3
+        "
+      >
+        New
+      </div>
+    </div>
+
+    <!-- NEW project -->
+    <div
+      class="relative group md:row-span-1 md:col-span-2 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
       style="background-image: url(/assets/clients/client-new.jpg)"
     >
       <h1 class="font-extrabold uppercase text-3xl text-white break-all">NEW Project</h1>

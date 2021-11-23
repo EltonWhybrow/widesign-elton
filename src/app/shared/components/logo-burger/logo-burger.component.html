@@ -11,14 +11,15 @@
         <a routerLink="/" routerLinkActive="router-link-active" class="p-3 w-full text-xl">Home</a>
 
         <!-- services -->
-        <a *ngIf="routerUrl != '/skills/me'" routerLink="/skills/me" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+        <a *ngIf="routerUrl != '/services/me'" routerLink="/services/me" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
           >Services</a
         >
         <label
-          *ngIf="routerUrl == '/skills/me'"
+          *ngIf="routerUrl == '/services/me'"
           for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Services <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Services <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
         ></label>
 
         <!-- testimonials -->
@@ -28,8 +29,9 @@
         <label
           *ngIf="routerUrl == '/testimonials'"
           for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Testimonials <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Testimonials <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
         ></label>
 
         <!-- about -->
@@ -39,8 +41,9 @@
         <label
           *ngIf="routerUrl == '/about-us'"
           for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >About <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >About <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
         ></label>
 
         <!-- resume -->
@@ -59,9 +62,10 @@
         <label
           *ngIf="routerUrl == '/clients'"
           for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Clients <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span>
-        </label>
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Clients <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
+        ></label>
 
         <!-- contact -->
         <a *ngIf="routerUrl != '/contact-us'" routerLink="/contact-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
@@ -70,8 +74,9 @@
         <label
           *ngIf="routerUrl == '/contact-us'"
           for="openSidebarMenu"
-          class="p-3 w-full text-3xl text-blue-chill-500 font-bold block text-center"
-          >Contact <span class="inline-block rounded-full h-4 w-4 animate-pulse bg-blue-chill-500"></span
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Contact <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
         ></label>
       </div>
     </div>
