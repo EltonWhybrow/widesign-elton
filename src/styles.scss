@@ -2,6 +2,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 
 body {
   // @apply bg-korma-500;
@@ -30,7 +31,7 @@ p {
 }
 
 .secondary-link {
-  @apply text-gray-400 hover:text-gray-500 whitespace-nowrap;
+  @apply text-blue-chill-800 hover:text-blue-chill-900 whitespace-nowrap;
 }
 
 .primary-btn {
@@ -38,7 +39,7 @@ p {
 }
 
 .secondary-btn {
-  @apply rounded p-2 px-3 m-2 text-lg flex-initial text-center text-blue-chill-400 hover:text-blue-chill-600 border border-blue-chill-400 hover:border-blue-chill-600;
+  @apply rounded p-2 px-3 my-2 text-lg flex-initial text-center text-blue-chill-400 hover:text-blue-chill-600 border border-blue-chill-400 hover:border-blue-chill-600;
 }
 
 // Logo ani
@@ -67,4 +68,8 @@ p {
     stroke-opacity: 0%;
     fill: white;
   }
+}
+
+.script-text {
+  font-family: "Parisienne", cursive;
 }

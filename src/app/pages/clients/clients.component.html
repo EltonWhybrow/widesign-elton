@@ -1,138 +1,64 @@
 <!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
 <div class="min-h-screen md:flex md:flex-column md:justify-center">
   <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-12">
-    <!-- MOBILE LOGO -->
-    <!-- <app-logo-mobile class="flex h-screen/2 md:h-auto md:hidden border-0 px-2 py-5"></app-logo-mobile> -->
-    <!-- MOBILE LOGO PAGES -->
-    <app-logo-sm class="md:hidden hover:animate-pulse"></app-logo-sm>
+    <!-- MOBILE LOGO / BURGER -->
+    <app-logo-burger class="md:hidden"></app-logo-burger>
 
     <div
       class="
         relative
-        group
         md:h-auto md:row-span-1 md:col-span-2
         w-full
-        p-3
-        md:rounded
-        border border-blue-chill-300
+        p-6
+        md:rounded md:border
+        border-blue-chill-300
         bg-no-repeat bg-cover bg-l
       "
     >
       <!-- style="background-image: url(/assets/clients/clients-selfie.jpg)" -->
-      <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
-        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>CLIENTS
+      <h1 class="font-extrabold uppercase text-4xl md:text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500 text-2xl">home</a
+        >CLIENTS
       </h1>
+      <div class="font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Existing</div>
 
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-xl text-blue-chill-700
-          break-all
-          pb-3
-        "
-      >
-        Existing
-      </div>
-
-      <p class="text-sm py-1">
-        Clients should be able to find what they're looking for here. Login to your hosting account to make an outstanding payment, add
-        email addresses or access you email online.
+      <p class="text-lg py-1">
+        <!-- <a href="https://uk.cloudlogin.co/login" target="_blank" rel="noopener" class="primary-link">Login/Manage</a> -->
+        Manage your existing hosting account to make an outstanding payment, edit email addresses and more.
       </p>
-      <p class="text-sm py-1">
-        Dont be afraid to <a routerLink="/contact-us" class="primary-link">ask for help</a> if you still having problems.
-      </p>
-      <p class="text-xs absolute bottom-0 right-2 py-1">
-        <a routerLink="/skills" class="secondary-link">Not a client yet?</a>
-      </p>
+      <p class="text-sm py-1">Having problems logging in? <a routerLink="/contact-us" class="primary-link">contact me</a></p>
     </div>
 
     <!-- Hosting Account Login -->
     <div
-      class="
-        relative
-        group
-        h-screen/4
-        md:h-auto md:row-span-1 md:col-span-2
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-      "
-      style="background-image: url(/assets/clients/client-account.jpg)"
+      class="relative md:h-auto md:row-span-1 md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
+      style="background-image: url(/assets/clients/client-account.webp)"
     >
       <h1 class="font-extrabold uppercase text-3xl text-white break-all">Hosting account</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Website &amp; Hosting
-      </div>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Website &amp; Hosting</div>
 
-      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
-        If you have received an outstandng payment reminder you can login to your hosting account here. Manage domain name, add/modify email
-        addresses and other stuff.
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-base md:text-sm">
+        If you have received an outstandng payment reminder, this is where you can make your payment. Also, other useful tasks like manage
+        domain name, add/modify email addresses.
       </p>
 
-      <p class="flex my-2 absolute bottom-0">
-        <a href="https://uk.cloudlogin.co/login" target="_blank" rel="noopener" class="primary-btn"> Login </a>
+      <p class="flex my-2 md:absolute bottom-0">
+        <a href="https://uk.cloudlogin.co/login" target="_blank" rel="noopener" class="primary-btn">Login</a>
       </p>
     </div>
 
     <!-- BACK BTN -->
-    <app-back-btn class="hidden md:block h-screen/4 md:h-auto"></app-back-btn>
+    <app-back-btn class="hidden md:block md:h-auto"></app-back-btn>
 
     <!-- Webmail -->
     <div
-      class="
-        relative
-        group
-        h-screen/4
-        md:h-auto md:row-span-1 md:col-span-2
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-      "
-      style="background-image: url(/assets/clients/client-webmail.jpg)"
+      class="relative group md:h-auto md:row-span-1 md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
+      style="background-image: url(/assets/clients/client-webmail.webp)"
     >
       <h1 class="font-extrabold uppercase text-3xl text-white break-all">Webmail</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Access you inbox
-      </div>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Access you inbox</div>
 
-      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-base md:text-sm">
         Access you email online anywhere, anytime. If you
         <a href="mailto:info@widesign.co.uk?subject=Lost my webmail login details" target="_blank" rel="noopener" class="primary-link"
           >lost your login details</a
@@ -140,51 +66,46 @@
         you will need to get in touch with me.
       </p>
 
-      <p class="flex my-2 absolute bottom-0">
-        <a href="https://webmail.supremecluster.com/" target="_blank" rel="noopener" class="primary-btn"> Login </a>
+      <p class="flex my-2 md:absolute bottom-0">
+        <a href="https://webmail.supremecluster.com/" target="_blank" rel="noopener" class="primary-btn">Login</a>
       </p>
+    </div>
+
+    <div
+      class="
+        block
+        md:hidden
+        relative
+        md:h-auto md:row-span-1 md:col-span-2
+        w-full
+        p-6
+        md:rounded md:border
+        border-blue-chill-300
+        bg-no-repeat bg-cover bg-l
+      "
+    >
+      <!-- style="background-image: url(/assets/clients/clients-selfie.jpg)" -->
+      <h1 class="font-extrabold uppercase text-4xl md:text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500 text-2xl">home</a
+        >CLIENTS
+      </h1>
+      <div class="font-extrabold text-2xl text-blue-chill-700 break-all pb-3">New</div>
     </div>
 
     <!-- NEW project -->
     <div
-      class="
-        relative
-        group
-        h-screen/4
-        md:row-span-1 md:col-span-2 md:h-auto
-        bg-no-repeat bg-cover bg-center
-        w-full
-        bg-gray-200
-        p-5
-        md:rounded
-      "
-      style="background-image: url(/assets/clients/client-new.jpg)"
+      class="relative md:row-span-1 md:col-span-2 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
+      style="background-image: url(/assets/clients/client-new.webp)"
     >
-      <h1 class="font-extrabold uppercase text-3xl text-white break-all">NEW Project</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Lets get started!
-      </div>
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Project/Client</h1>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Lets get started!</div>
 
-      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-base md:text-sm">
         Have a new project you want to discuss or need some help/updates on an exisitng site? Drop me an email and we can set up a meeting
         to discuss.
       </p>
 
-      <p class="flex my-2 absolute bottom-0">
+      <p class="flex my-2 md:absolute bottom-0">
         <a href="mailto:info@widesign.co.uk?subject=Can you help me? Elton" target="_blank" rel="noopener" class="primary-btn">
           Email Elton
         </a>

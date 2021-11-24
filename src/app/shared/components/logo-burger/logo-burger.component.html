@@ -1,0 +1,127 @@
+<div class="flex cursor-pointer h-full w-full block px-2 py-0 bg-blue-chill-500">
+  <div class="flex-1">
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+      <div class="main-content-wrapper bg-blue-chill-400 text-white h-full pt-3">
+        <a routerLink="/" routerLinkActive="router-link-active" class="p-3 w-full text-xl">Home</a>
+
+        <!-- services -->
+        <a *ngIf="routerUrl != '/services/me'" routerLink="/services/me" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >Services</a
+        >
+        <label
+          *ngIf="routerUrl == '/services/me'"
+          for="openSidebarMenu"
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Services <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
+        ></label>
+
+        <!-- testimonials -->
+        <a *ngIf="routerUrl != '/testimonials'" routerLink="/testimonials" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >Testimonials</a
+        >
+        <label
+          *ngIf="routerUrl == '/testimonials'"
+          for="openSidebarMenu"
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Testimonials <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
+        ></label>
+
+        <!-- about -->
+        <a *ngIf="routerUrl != '/about-us'" routerLink="/about-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >About</a
+        >
+        <label
+          *ngIf="routerUrl == '/about-us'"
+          for="openSidebarMenu"
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >About <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
+        ></label>
+
+        <!-- resume -->
+        <a
+          href="https://drive.google.com/file/d/1kxmPTJPk_RUZv6ktXIkvw7_A1c0EMYp8/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          class="p-3 w-full text-xl"
+          >Resume</a
+        >
+
+        <!-- clients -->
+        <a *ngIf="routerUrl != '/clients'" routerLink="/clients" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >Clients</a
+        >
+        <label
+          *ngIf="routerUrl == '/clients'"
+          for="openSidebarMenu"
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Clients <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
+        ></label>
+
+        <!-- contact -->
+        <a *ngIf="routerUrl != '/contact-us'" routerLink="/contact-us" routerLinkActive="router-link-active" class="p-3 w-full text-xl"
+          >Contact Us</a
+        >
+        <label
+          *ngIf="routerUrl == '/contact-us'"
+          for="openSidebarMenu"
+          class="p-3 w-full relative text-3xl text-blue-chill-500 border-t border-b border-blue-chill-700 font-bold block text-center"
+          >Contact <span class="inline-block rounded-full h-2 w-2 mb-1 animate-ping md:animate-none bg-blue-chill-700 absolute"></span
+          ><span class="inline-block rounded-full h-2 w-2 mb-1 bg-blue-chill-700 absolute"></span
+        ></label>
+      </div>
+    </div>
+  </div>
+
+  <!-- <svg
+    class="flex-1"
+    width="100%"
+    height="80px"
+    viewBox="0 0 100 100"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <g id="logo_web" fill="none" transform="translate(-10.000000, -10.000000)">
+      <rect id="Rectangle" x="0" y="0" width="280" height="280"></rect>
+      <path
+        class="path"
+        stroke="#0d888c"
+        stroke-width="1"
+        d="M81.984,36.912 C80.892,36.912 80.136,37.752 80.22,38.844 C80.304,40.272 78.288,41.616 75.684,42.036 C72.156,35.988 66.696,31.2 61.152,31.2 C56.364,31.2 54.096,34.056 54.096,36.912 C54.096,44.472 66.024,46.488 73.5,45.816 C75.516,50.016 76.608,55.056 76.608,59.928 C76.608,73.872 69.216,83.868 58.632,83.868 C52.416,83.868 49.56,79.332 48.132,76.98 C53.508,70.344 56.7,61.608 56.7,56.232 C56.7,48.504 53.004,47.076 50.652,47.076 C44.352,47.076 41.412,56.316 41.412,62.784 C41.412,67.992 42.252,72.612 43.764,76.392 C40.488,79.92 36.288,82.86 31.584,82.86 C28.728,82.86 26.46,81.684 24.78,80.004 C22.596,77.736 21.42,73.956 21.42,69 C21.42,64.548 22.512,59.424 24.696,54.72 C34.86,54.72 47.124,46.908 47.124,41.28 C47.124,38.172 44.772,35.988 41.58,35.988 C34.104,35.988 27.132,42.624 22.596,50.94 C19.488,50.184 16.212,47.748 16.212,43.296 C16.212,42.96 16.38,41.616 16.38,41.364 C16.38,40.356 15.624,39.516 14.616,39.516 C12.6,39.516 12.6,41.868 12.6,43.296 C12.6,48.84 16.38,52.704 21,54.132 C18.984,59.004 17.64,64.212 17.64,69 C17.64,79.668 22.512,86.22 31.584,86.22 C36.456,86.22 41.244,83.952 45.528,79.668 C48.468,84.876 53.424,87.312 58.632,87.312 C71.148,87.312 80.388,76.14 80.388,59.928 C80.388,54.888 79.212,49.68 77.28,45.144 C82.236,43.884 83.832,41.28 83.832,38.844 C83.832,37.752 82.992,36.912 81.984,36.912 Z M57.96,36.912 C57.96,35.736 59.052,34.812 61.152,34.812 C64.512,34.812 68.544,37.584 71.82,42.456 C63,42.792 57.96,39.768 57.96,36.912 L57.96,36.912 Z M50.652,50.688 C52.332,50.688 52.92,53.04 52.92,56.232 C52.92,60.18 50.568,67.656 46.536,73.536 C45.612,70.512 45.108,66.564 45.108,62.784 C45.108,57.744 47.376,50.688 50.652,50.688 L50.652,50.688 Z M41.58,39.516 C42.336,39.516 43.344,39.936 43.344,41.28 C43.344,44.052 34.86,50.268 26.544,51.108 C30.492,44.22 36.372,39.516 41.58,39.516 L41.58,39.516 Z M91.224,74.376 C88.032,74.376 85.428,76.896 85.428,80.424 C85.428,84.624 89.796,87.396 94.584,87.396 C100.968,87.396 104.664,83.532 104.664,78.324 C104.664,74.04 101.892,71.604 97.776,69.168 C94.416,67.152 93.66,66.144 93.66,64.548 C93.66,62.364 95.172,60.684 97.86,60.684 C100.044,60.684 101.22,62.532 101.472,63.372 C101.64,64.044 102.48,64.464 102.984,64.464 C104.076,64.464 104.916,63.624 104.916,62.532 C104.916,61.104 102.984,57.492 97.944,57.492 C92.736,57.492 89.964,61.104 89.964,64.548 C89.964,68.748 93.408,71.016 96.096,72.444 C99.876,74.46 100.884,76.812 100.884,78.828 C100.884,82.608 97.692,84.372 94.668,84.372 C91.644,84.372 89.208,82.356 89.208,80.34 C89.208,79.164 89.628,77.904 91.224,77.904 C91.812,77.904 92.064,78.072 92.568,78.156 C93.072,78.24 94.248,77.988 94.248,76.56 C94.248,74.88 92.736,74.376 91.224,74.376 L91.224,74.376 Z"
+        id="WS"
+      ></path>
+    </g>
+  </svg> -->
+
+  <div routerLink="/" routerLinkActive="router-link-active" class="flex-1">
+    <img class="h-16 object-cover object-center float-right p-2" src="/assets/logos/logo_static_mob.svg" alt="widesign logo mobile" />
+
+    <!-- <svg
+      width="210px"
+      height="135px"
+      viewBox="0 0 210 135"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <g id="logo_static_logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-21.000000, -60.000000)" fill="#FFFFFF">
+          <path
+            d="M178.8416,82.8672 C178.8416,80.5376 177.0496,78.7456 174.8992,78.7456 C172.5696,78.7456 170.9568,80.5376 171.136,82.8672 C171.3152,85.9136 167.0144,88.7808 161.4592,89.6768 C153.9328,76.7744 142.2848,66.56 130.4576,66.56 C120.2432,66.56 115.4048,72.6528 115.4048,78.7456 C115.4048,94.8736 140.8512,99.1744 156.8,97.7408 C161.1008,106.7008 163.4304,117.4528 163.4304,127.8464 C163.4304,157.5936 147.6608,178.9184 125.0816,178.9184 C111.8208,178.9184 105.728,169.2416 102.6816,164.224 C114.1504,150.0672 120.96,131.4304 120.96,119.9616 C120.96,103.4752 113.0752,100.4288 108.0576,100.4288 C94.6176,100.4288 88.3456,120.1408 88.3456,133.9392 C88.3456,145.0496 90.1376,154.9056 93.3632,162.9696 C86.3744,170.496 77.4144,176.768 67.3792,176.768 C61.2864,176.768 56.448,174.2592 52.864,170.6752 C48.2048,165.8368 45.696,157.7728 45.696,147.2 C45.696,137.7024 48.0256,126.7712 52.6848,116.736 C74.368,116.736 100.5312,100.0704 100.5312,88.064 C100.5312,81.4336 95.5136,76.7744 88.704,76.7744 C72.7552,76.7744 57.8816,90.9312 48.2048,108.672 C41.5744,107.0592 34.5856,101.8624 34.5856,92.3648 C34.5856,91.648 34.944,88.7808 34.944,88.2432 C34.944,86.0928 33.3312,84.3008 31.1808,84.3008 C26.88,84.3008 26.88,89.3184 26.88,92.3648 C26.88,104.192 34.944,112.4352 44.8,115.4816 C40.4992,125.8752 37.632,136.9856 37.632,147.2 C37.632,169.9584 48.0256,183.936 67.3792,183.936 C77.7728,183.936 87.9872,179.0976 97.1264,169.9584 C103.3984,181.0688 113.9712,186.2656 125.0816,186.2656 C151.7824,186.2656 171.4944,162.432 171.4944,127.8464 C171.4944,117.0944 168.9856,105.984 164.864,96.3072 C175.4368,93.6192 178.8416,88.064 178.8416,82.8672 L178.8416,82.8672 Z M123.648,78.7456 C123.648,76.2368 125.9776,74.2656 130.4576,74.2656 C137.6256,74.2656 146.2272,80.1792 153.216,90.5728 C134.4,91.2896 123.648,84.8384 123.648,78.7456 L123.648,78.7456 Z M108.0576,108.1344 C111.6416,108.1344 112.896,113.152 112.896,119.9616 C112.896,128.384 107.8784,144.3328 99.2768,156.8768 C97.3056,150.4256 96.2304,142.0032 96.2304,133.9392 C96.2304,123.1872 101.0688,108.1344 108.0576,108.1344 L108.0576,108.1344 Z M88.704,84.3008 C90.3168,84.3008 92.4672,85.1968 92.4672,88.064 C92.4672,93.9776 74.368,107.2384 56.6272,109.0304 C65.0496,94.336 77.5936,84.3008 88.704,84.3008 L88.704,84.3008 Z M194.6112,158.6688 C187.8016,158.6688 182.2464,164.0448 182.2464,171.5712 C182.2464,180.5312 191.5648,186.4448 201.7792,186.4448 C215.3984,186.4448 223.2832,178.2016 223.2832,167.0912 C223.2832,157.952 217.3696,152.7552 208.5888,147.5584 C201.4208,143.2576 199.808,141.1072 199.808,137.7024 C199.808,133.0432 203.0336,129.4592 208.768,129.4592 C213.4272,129.4592 215.936,133.4016 216.4736,135.1936 C216.832,136.6272 218.624,137.5232 219.6992,137.5232 C222.0288,137.5232 223.8208,135.7312 223.8208,133.4016 C223.8208,130.3552 219.6992,122.6496 208.9472,122.6496 C197.8368,122.6496 191.9232,130.3552 191.9232,137.7024 C191.9232,146.6624 199.2704,151.5008 205.0048,154.5472 C213.0688,158.848 215.2192,163.8656 215.2192,168.1664 C215.2192,176.2304 208.4096,179.9936 201.9584,179.9936 C195.5072,179.9936 190.3104,175.6928 190.3104,171.392 C190.3104,168.8832 191.2064,166.1952 194.6112,166.1952 C195.8656,166.1952 196.4032,166.5536 197.4784,166.7328 C198.5536,166.912 201.0624,166.3744 201.0624,163.328 C201.0624,159.744 197.8368,158.6688 194.6112,158.6688 L194.6112,158.6688 Z"
+            id="WS"
+          ></path>
+        </g>
+      </g>
+    </svg> -->
+  </div>
+</div>

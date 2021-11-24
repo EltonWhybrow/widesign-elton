@@ -1,249 +1,126 @@
 <!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
 <div class="min-h-screen md:flex md:flex-column md:justify-center">
   <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-12">
-    <!-- MOBILE LOGO -->
-    <!-- <app-logo-mobile class="flex h-screen md:h-auto md:hidden border-0 px-2 py-5"></app-logo-mobile> -->
-    <!-- MOBILE LOGO PAGES -->
-    <app-logo-sm class="md:hidden hover:animate-pulse"></app-logo-sm>
-
-    <!-- btroofing -->
-    <a
-      (click)="currentTab = 'btroofing'"
-      routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        cursor-pointer
-        w-full
-        bg-gray-200
-        p-3
-        md:rounded md:h-auto md:row-span-1 md:col-span-1
-      "
-      style="background-image: url(/assets/testimonials/btroofing.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">BT <br class="hidden md:inline-block" />Roofing</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Frankie Austin
-      </div>
-    </a>
-
-    <!-- spares4mowers -->
-    <a
-      (click)="currentTab = 'spares4mowers'"
-      routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        cursor-pointer
-        w-full
-        bg-gray-200
-        p-3
-        md:rounded md:h-auto md:row-span-1 md:col-span-1
-      "
-      style="background-image: url(/assets/testimonials/spares4mowers.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">Spares 4 <br class="hidden md:inline-block" />Mowers</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Mark James
-      </div>
-    </a>
+    <!-- MOBILE LOGO / BURGER -->
+    <app-logo-burger class="md:hidden"></app-logo-burger>
 
     <div
-      class="
-        hidden
-        md:block
-        relative
-        group
-        md:h-auto md:row-span-2 md:col-span-2
-        w-full
-        p-3
-        md:rounded
-        border border-blue-chill-300
-        bg-no-repeat bg-cover bg-center
-      "
-      style="background-image: url(/assets/testimonials/testimonial-selfie.jpg)"
+      class="block md:hidden relative w-full p-3 pb-0 bg-no-repeat bg-cover bg-center"
+      style="background-image: url(/assets/testimonials/testimonial-selfie.webp)"
     >
-      <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
-        <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
+      <h1 class="font-extrabold uppercase text-4xl md:text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500 text-2xl"
+          >home</a
         >Testimonials
       </h1>
-      <!-- <p class="text-white">Restoring faith in humanity, one perosn at a time.</p> -->
-      <!-- btroofing -->
-      <div *ngIf="currentTab === 'btroofing'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-btroofing (eventClick)="handleEventClicked($event)"></app-btroofing>
+      <div class="font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Real life people</div>
+
+      <!-- <p class="text-lg py-1">
+        Hope to add more testimonials soon...
+      </p> -->
+    </div>
+    <!-- btroofing -->
+    <div
+      class="
+        md:h-auto
+        bg-no-repeat bg-cover bg-center
+        cursor-pointer
+        w-full
+        bg-gray-200
+        p-3
+        md:rounded md:h-auto md:row-span-1 md:col-span-2
+      "
+      style="background-image: url(/assets/testimonials/btroofing.webp)"
+    >
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">BT Roofing</h1>
+
+      <div class="bg-white bg-opacity-80 rounded p-2 px-2 my-2">
+        <p class="text-base">
+          <span class="text-4xl">"</span>It can be a minefield trying to choose the right designers/developer to work with,
+          <span class="font-bold">Elton's extremely passionate</span>, he brings fresh new ideas to table every time.
+        </p>
+        <p class="text-base">
+          His extensive knowledge and computer wizardry is something to be admired, which has definitely given my company a competitive
+          edge.
+        </p>
+      </div>
+      <div class="font-extrabold text-base break-all relative bottom-0 text-white text-right">Frankie Austin</div>
+    </div>
+
+    <!-- flashlight -->
+    <div
+      class="
+        md:h-auto
+        bg-no-repeat bg-cover bg-center
+        cursor-pointer
+        w-full
+        bg-gray-200
+        p-3
+        md:rounded md:h-auto md:row-span-1 md:col-span-2
+      "
+      style="background-image: url(/assets/testimonials/flashlight.webp)"
+    >
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Flashlight <br class="hidden md:inline-block" />Photography</h1>
+
+      <div class="bg-white bg-opacity-80 rounded p-2 px-2 my-2">
+        <p class="text-base">
+          <span class="text-4xl">"</span>You cannot go wrong with this development company. Worked with them a many times over the past 7+
+          years and always happy
+        </p>
       </div>
 
-      <!--  budlandscapes -->
-      <div *ngIf="currentTab === 'budlandscapes'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-budlandscapes (eventClick)="handleEventClicked($event)"></app-budlandscapes>
-      </div>
-
-      <!--  spares4mowers -->
-      <div *ngIf="currentTab === 'spares4mowers'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-spares4mowers (eventClick)="handleEventClicked($event)"></app-spares4mowers>
-      </div>
-
-      <!--  flashlight -->
-      <div *ngIf="currentTab === 'flashlight'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-flashlight (eventClick)="handleEventClicked($event)"></app-flashlight>
-      </div>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white text-right">Sue King</div>
     </div>
 
     <!-- BACK BTN -->
     <app-back-btn class="hidden md:block h-screen/4 md:h-auto"></app-back-btn>
 
-    <!-- flashlight -->
-    <a
-      (click)="currentTab = 'flashlight'"
-      routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        cursor-pointer
-        w-full
-        bg-gray-200
-        p-3
-        md:rounded md:h-auto md:row-span-1 md:col-span-1
-      "
-      style="background-image: url(/assets/testimonials/flashlight.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">Flashlight <br class="hidden md:inline-block" />Photography</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Sue King
-      </div>
-    </a>
-
     <!-- budlandscapes -->
-    <a
-      (click)="currentTab = 'budlandscapes'"
-      routerLinkActive="active"
-      class="
-        group
-        hover:animate-pulse
-        md:h-auto
-        bg-no-repeat bg-cover bg-center
-        cursor-pointer
-        w-full
-        bg-gray-200
-        p-3
-        md:rounded md:h-auto md:row-span-1 md:col-span-1
-      "
-      style="background-image: url(/assets/testimonials/budlandscapes.jpg)"
-    >
-      <h1 class="font-extrabold uppercase text-xl text-white break-all">Bud <br class="hidden md:inline-block" />Landscapes</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Steve Corio
-      </div>
-    </a>
-
     <div
       class="
-        md:hidden
-        relative
-        group
-        md:h-auto md:row-span-2 md:col-span-2
-        w-full
-        p-3
-        md:rounded md:border
-        border-blue-chill-300
+        md:h-auto
         bg-no-repeat bg-cover bg-center
+        cursor-pointer
+        w-full
+        bg-gray-200
+        p-3
+        md:rounded md:h-auto md:row-span-1 md:col-span-2
       "
-      style="background-image: url(/assets/testimonials/testimonial-selfie.jpg)"
+      style="background-image: url(/assets/testimonials/budlandscapes.webp)"
     >
-      <h1 class="font-extrabold uppercase text-2xl break-all text-korma-400">
-        <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
-        >Testimonials
-      </h1>
-      <!-- <p class="text-white">Restoring faith in humanity, one perosn at a time.</p> -->
-      <!-- btroofing -->
-      <div *ngIf="currentTab === 'btroofing'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-btroofing (eventClick)="handleEventClicked($event)"></app-btroofing>
-      </div>
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Bud <br class="hidden md:inline-block" />Landscapes</h1>
 
-      <!--  budlandscapes -->
-      <div *ngIf="currentTab === 'budlandscapes'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-budlandscapes (eventClick)="handleEventClicked($event)"></app-budlandscapes>
+      <div class="bg-white bg-opacity-80 rounded p-2 px-2 my-2">
+        <p class="text-base">
+          <span class="text-4xl">"</span>Having Elton Design and build our website has <span class="font-bold">been a true pleasure</span>,
+          not only did he capture our vision beautifully he took it to the next level.
+        </p>
       </div>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white text-right">Steve Corio</div>
+    </div>
 
-      <!--  spares4mowers -->
-      <div *ngIf="currentTab === 'spares4mowers'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-spares4mowers (eventClick)="handleEventClicked($event)"></app-spares4mowers>
-      </div>
+    <!-- spares 4 mowers -->
+    <div
+      class="
+        md:h-auto
+        bg-no-repeat bg-cover bg-center
+        cursor-pointer
+        w-full
+        bg-gray-200
+        p-3
+        md:rounded md:h-auto md:row-span-1 md:col-span-2
+      "
+      style="background-image: url(/assets/testimonials/spares4mowers.webp)"
+    >
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Spares 4<br class="hidden md:inline-block" />Mowers</h1>
 
-      <!--  flashlight -->
-      <div *ngIf="currentTab === 'flashlight'">
-        <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-        <app-flashlight (eventClick)="handleEventClicked($event)"></app-flashlight>
+      <div class="bg-white bg-opacity-80 rounded p-2 px-2 my-2">
+        <p class="text-base">
+          <span class="text-4xl">"</span>Had the best experience working with WideSign. Elton knows his stuff and is
+          <span class="font-bold">extremely competent and reliable</span>... All the best.
+        </p>
       </div>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white text-right">Mark James</div>
     </div>
 
     <!-- LOGO -->

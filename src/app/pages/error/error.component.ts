@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./error.component.scss'],
 })
 export class ErrorComponent implements OnInit {
-  title = 'Opps!! There been a bo bo!  #error';
-  constructor() {}
+  title = 'Opps! Wheres my ice-cream gone';
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

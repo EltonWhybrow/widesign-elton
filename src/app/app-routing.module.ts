@@ -18,9 +18,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, data: { animationState: 'home' } },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
-    path: 'skills',
+    path: 'services',
     component: SkillsComponent,
-    data: { animationState: 'skills' },
+    data: { animationState: 'services' },
     children: [
       { path: 'me', component: MeComponent, data: { animationState: 'me' } },
       { path: '', pathMatch: 'full', redirectTo: 'me' },

@@ -19,7 +19,9 @@ import { BudlandscapesComponent } from './pages/testimonial/budlandscapes/budlan
 import { BtroofingComponent } from './pages/testimonial/btroofing/btroofing.component'
 import { Spares4mowersComponent } from './pages/testimonial/spares4mowers/spares4mowers.component'
 import { FlashlightComponent } from './pages/testimonial/flashlight/flashlight.component'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 
 @NgModule({
@@ -41,7 +43,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     Spares4mowersComponent,
     FlashlightComponent
   ],
-  imports: [BrowserAnimationsModule, BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, SharedModule],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
+
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent]
 })

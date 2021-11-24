@@ -1,47 +1,32 @@
 <!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
 <div class="min-h-screen md:flex md:flex-column md:justify-center">
   <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-1 md:gap-3 md:m-12">
-    <!-- MOBILE LOGO -->
-    <!-- <app-logo-mobile class="flex h-screen md:h-auto md:hidden border-0 px-2 py-5"></app-logo-mobile> -->
-    <!-- MOBILE LOGO PAGES -->
-    <app-logo-sm class="md:hidden hover:animate-pulse"></app-logo-sm>
+    <!-- MOBILE LOGO / BURGER -->
+    <app-logo-burger class="md:hidden"></app-logo-burger>
 
     <!-- contact -->
     <div
       class="
         relative
-        group
         md:h-auto md:row-span-2 md:col-span-4
         w-full
-        md:rounded
-        border border-blue-chill-300
+        md:rounded md:border
+        border-blue-chill-300
         p-0
         bg-no-repeat bg-center
         sm:bg-cover
       "
     >
       <!-- style="background-image: url(/assets/contact/contact-selfie.jpg); background-size: 140%" -->
-      <div class="p-8">
+      <div class="p-6">
         <h1 class="font-extrabold uppercase text-4xl break-all text-korma-400">
-          <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a
+          <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500 text-3xl"
+            >home</a
           >Contact
         </h1>
-        <div
-          class="
-            transition-opacity
-            duration-1000
-            ease-out
-            opacity-0
-            group-hover:opacity-100
-            font-extrabold
-            text-2xl text-blue-chill-700
-            break-all
-            pb-3
-          "
-        >
-          Get in touch
-        </div>
-        <p class="text-lg py-2">
+        <div class="font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Get in touch</div>
+
+        <p class="text-lg pb-2">
           I make web experiences enjoyable and make life easier for end users and your customers, if you need help with your business web
           requirements or with an individual project, drop me some details and we can start a conversation. See what
           <a routerLink="/testimonials" class="primary-link">people I've worked with say</a> about me.
@@ -51,7 +36,7 @@
             Email me
           </a>
 
-          <a routerLink="/clients" routerLinkActive="router-link-active" class="secondary-btn"> Existing clients </a>
+          <a routerLink="/clients" routerLinkActive="router-link-active" class="secondary-btn ml-2"> Existing clients </a>
         </p>
 
         <div class="mt-3">
@@ -67,7 +52,7 @@
         </div>
       </div>
 
-      <div class="md:absolute w-full bottom-0 p-8 bg-blue-chill-300 bg-opacity-50">
+      <div class="md:absolute w-full bottom-0 p-6 bg-blue-chill-300 bg-opacity-50">
         <h3 class="text-xl mb-1 font-bold">Get a head start!</h3>
         <p class="text-sm pb-6 leading-relaxed">
           Search for your available
@@ -79,7 +64,7 @@
         </p>
 
         <!-- FOOTER -->
-        <app-footer class="w-full"></app-footer>
+        <app-footer class="w-full hidden md:block"></app-footer>
       </div>
     </div>
 
@@ -88,8 +73,5 @@
 
     <!-- LOGO -->
     <app-logo class="hidden md:block border border-blue-chill-300 md:rounded"></app-logo>
-
-    <!-- FOOTER -->
-    <!-- <app-footer class="md:col-span-5"></app-footer> -->
   </div>
 </div>
