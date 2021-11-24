@@ -1,7 +1,7 @@
 name: NodeJS with Webpack Production
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 
