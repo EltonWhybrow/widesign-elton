@@ -1,3 +1,5 @@
+![example workflow](https://github.com/EltonWhybrow/widesign-elton/actions/workflows/staging_release.yml/badge.svg) | ![example workflow](https://github.com/EltonWhybrow/widesign-elton/actions/workflows/prod_release.yml/badge.svg)
+
 # WidesignElton
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
