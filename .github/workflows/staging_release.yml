@@ -38,8 +38,8 @@ jobs:
   deployment:
     needs: build
     runs-on: ubuntu-latest
-    environment: production
-    concurrency: production
+    environment: staging
+    concurrency: staging
     steps:
       - name: Download dist folder
         uses: actions/download-artifact@v2
