@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { Router, NavigationEnd } from '@angular/router'
-import { filter } from 'rxjs/operators'
+import { Router } from '@angular/router'
+import { Title, Meta } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,18 @@ import { filter } from 'rxjs/operators'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  title = 'Home'
+  title = 'Web Design & Development | Home | WideSign'
   routerUrl: any
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private titleService: Title, private metaService: Meta) {
     console.log(this.router.url)
     this.routerUrl = this.router.url
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title)
+    this.metaService.updateTag(
+      { name: 'description', content: 'Welcome to WideSign providing Web Development & Design in Redhill and Reigate Surrey' }
+    )
+  }
 }

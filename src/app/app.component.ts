@@ -18,7 +18,7 @@ import { Title, Meta } from '@angular/platform-browser'
   animations: [fader],
 })
 export class AppComponent implements OnInit {
-  title = 'Home - Design & Development - WideSign'
+  title = 'Elton Whybrow - Design & Development - WideSign'
 
   loading = false
 
@@ -56,8 +56,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
     this.metaService.addTags([
-      { name: 'keywords', content: 'Development, Desgin, Web Design, Hosting' },
-      { name: 'description', content: 'Custom Development and Design in the Redhill and Reigate Surrey' },
+      { name: 'keywords', content: 'Development, Design, Full Stack, Angular, JS, Web Design, Hosting, Domain Name' },
       { name: 'robots', content: 'index, follow' }
     ])
   }
