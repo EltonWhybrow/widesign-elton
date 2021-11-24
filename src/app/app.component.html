@@ -58,9 +58,11 @@
     </svg>
   </div>
 </div> -->
-<main [@routeAnimations]="prepareRoute(outlet)">
+<main [@routeAnimations]="prepareRoute(outlet)" class="min-h-screen">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
 
 <!-- FOOTER -->
-<app-footer class="block md:hidden w-full py-16 px-2 mx-auto flex justify-center border-t-8 border-blue-chill-600"></app-footer>
+<app-footer
+  class="block md:hidden w-full py-16 px-2 mx-auto flex justify-center border-t-8 border-blue-chill-300 bg-blue-chill-500"
+></app-footer>

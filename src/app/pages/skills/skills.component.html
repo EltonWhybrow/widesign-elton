@@ -5,154 +5,119 @@
     <app-logo-burger class="md:hidden"></app-logo-burger>
 
     <div
-      class="group md:h-auto md:row-span-1 md:col-span-4 w-full p-6 md:rounded md:border border-blue-chill-300 bg-no-repeat bg-cover bg-l"
+      class="
+        relative
+        md:h-auto md:row-span-1 md:col-span-2
+        w-full
+        p-6
+        md:rounded md:border
+        border-blue-chill-300
+        bg-no-repeat bg-cover bg-l
+      "
     >
-      <!-- style="background-image: url(/assets/about/about-selfie.webp)" -->
-      <!-- ABOUT MAIN -->
-      <!-- <div *ngIf="currentTab === 'generic'"> -->
-      <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-      <!-- <app-me (eventClick)="handleEventClicked($event)"></app-me>
-      </div> -->
+      <h1 class="font-extrabold uppercase text-4xl md:text-2xl break-all text-korma-400">
+        <a routerLink="/" routerLinkActive="active" class="cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>services
+      </h1>
+      <div class="font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Skills</div>
 
-      <!-- DEVELOPMENT -->
-      <!-- <div *ngIf="currentTab === 'development'"> -->
-      <!-- input example 'Thing in () [] represent child property !! [event]="currentTab" -->
-      <!-- <app-dev (eventClick)="handleEventClicked($event)"></app-dev>
-      </div> -->
+      <p class="text-lg md:text-sm pb-2">
+        Helping companies with their branding and creating a identity for them &amp; their businesses. Some of our core focus points are:
+      </p>
 
-      <!-- DESIGN -->
-      <!-- <div *ngIf="currentTab === 'design'">
-        <app-design (eventClick)="handleEventClicked($event)"></app-design>
-      </div> -->
+      <ul class="list-disc list-inside text-blue-chill-700 text-lg md:text-sm">
+        <li>User-centric</li>
+        <li>Brand enhancement</li>
+        <li>Problem solving</li>
+        <li>Performance &amp; Engagement</li>
+        <!-- <li></li> -->
+      </ul>
+      <!-- <p class="flex my-1">
+        <a href="mailto:info@widesign.co.uk?subject=Can you help me? Elton" target="_blank" rel="noopener" class="primary-btn"
+          >Get in touch</a
+        >
 
-      <!-- UX/UI -->
-      <!-- <div *ngIf="currentTab === 'uxui'">
-        <app-uxui (eventClick)="handleEventClicked($event)"></app-uxui>
-      </div> -->
+        <a routerLink="/clients" routerLinkActive="router-link-active" class="secondary-btn ml-2"> Existing client? </a>
+      </p> -->
+    </div>
 
-      <!-- MORE... -->
-      <!-- <div *ngIf="currentTab === 'more'">
-        <app-more (eventClick)="handleEventClicked($event)"></app-more>
-      </div> -->
+    <!-- Development -->
+    <div
+      class="relative md:h-auto md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
+      style="background-image: url(/assets/dev.webp)"
+    >
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Dev</h1>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Front2Back</div>
 
-      <!-- <router-outlet></router-outlet> -->
-      <router-outlet></router-outlet>
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
+        Consious development decisions are made thoughout any build and the room need for fast changing product landcsapes is at the
+        forefront of those choices. If you want to discuss your requirements just get in touch.
+      </p>
+
+      <p class="flex my-2 md:absolute bottom-0">
+        <a routerLink="/contact" routerLinkActive="active" class="primary-btn">Contact us</a>
+      </p>
     </div>
 
     <!-- BACK BTN -->
     <app-back-btn class="hidden md:block h-screen/4 md:h-auto"></app-back-btn>
 
-    <!-- Development -->
-    <a
-      routerLink="/services/development"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/services/development' ? 'opacity-30' : 'opacity-100'"
-      style="background-image: url(/assets/dev.webp)"
-    >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Dev</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Front to back
-      </div>
-    </a>
-
     <!-- Design -->
-    <a
-      routerLink="/services/design"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/services/design' ? 'opacity-30' : 'opacity-100'"
+    <div
+      class="relative md:h-auto md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
       style="background-image: url(/assets/design.webp)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">Design</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Make things pretty
-      </div>
-    </a>
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Design</h1>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Make things pretty</div>
+
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
+        We use design intelligently and air on the side of caution to not muddy the message. An intuitive interface and clever design
+        compliments the content and draws consumers in.
+      </p>
+
+      <!-- <p class="flex my-2 md:absolute bottom-0">
+      <a href="https://uk.cloudlogin.co/login" target="_blank" rel="noopener" class="primary-btn">Login</a>
+    </p> -->
+    </div>
 
     <!-- UX /UI -->
-    <a
-      routerLink="/services/ux-ui"
-      routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/services/ux-ui' ? 'opacity-30' : 'opacity-100'"
+    <div
+      class="relative md:h-auto md:col-span-2 bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded"
       style="background-image: url(/assets/uxui.webp)"
     >
-      <!-- {{ currentUrl }} -->
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">UX/UI</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Make life good
-      </div>
-    </a>
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">UX/UI</h1>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Make life good</div>
+
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
+        Usability is a key considerations when building any application. Confusing the user is you single point of failure. Here at WideSign
+        we pride ourselves on our simple and intuitive target driven interfaces & design.
+      </p>
+
+      <p class="flex my-2 md:absolute bottom-0">
+        <!-- <a href="https://uk.cloudlogin.co/login" target="_blank" rel="noopener" class="primary-btn">Login</a> -->
+        <a href="mailto:info@widesign.co.uk?subject=Can you help me? Elton" target="_blank" rel="noopener" class="primary-btn">
+          Email me
+        </a>
+      </p>
+    </div>
 
     <!-- More -->
     <!-- <a
       routerLink="/services/more"
       routerLinkActive="active"
-      class="group h-screen/4 md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
-      [ngClass]="currentUrl === '/services/more' ? 'opacity-30' : 'opacity-100'"
+      class="md:h-auto bg-no-repeat bg-cover bg-center w-full bg-gray-200 p-5 md:rounded cursor-pointer"
       style="background-image: url(/assets/more.webp)"
     >
-      <h1 class="font-extrabold uppercase text-4xl text-white break-all">More</h1>
-      <div
-        class="
-          transition-opacity
-          duration-1000
-          ease-out
-          opacity-0
-          group-hover:opacity-100
-          font-extrabold
-          text-sm
-          break-all
-          relative
-          bottom-0
-          text-white
-        "
-      >
-        Helpers
-      </div>
+      <h1 class="font-extrabold uppercase text-3xl text-white break-all">Hosting account</h1>
+      <div class="font-extrabold text-sm break-all relative bottom-0 text-white">Website &amp; Hosting</div>
+
+      <p class="bg-white bg-opacity-80 rounded p-1 px-2 my-2 text-sm">
+        If you have received an outstandng payment reminder, this is where you can make your payment. Also, other useful tasks like manage
+        domain name, add/modify email addresses.
+      </p>
+
+      <p class="flex my-2 md:absolute bottom-0">
+        <a href="https://uk.cloudlogin.co/login" target="_blank" rel="noopener" class="primary-btn">Login</a>
+      </p>
     </a> -->
 
     <!-- LOGO -->

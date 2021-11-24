@@ -54,8 +54,13 @@
       </a>
     </div>
 
-    <div class="flex-none w-full md-w-auto md:flex-1 text-right px-5 mt-1 md:mt-0 md:px-2">
-      <span class="inline-block align-baseline text-blue-chill-800 text-xs pt-3">&copy; WideSign 2006-2021</span>
+    <div class="flex-none w-full md-w-auto md:flex-1 px-5 mt-1 md:mt-0 md:px-2">
+      <div class="flex justify-between">
+        <p class="inline-block align-baseline text-blue-chill-800 text-xs pt-3">
+          <a routerLink="/admin" class="secondary-link">Playground?</a>
+        </p>
+        <span class="inline-block align-baseline text-blue-chill-800 text-xs pt-3">&copy; WideSign 2006-{{ year }}</span>
+      </div>
     </div>
   </div>
 </div>
