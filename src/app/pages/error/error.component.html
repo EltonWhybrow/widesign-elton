@@ -1,32 +1,57 @@
-<div
-  class="h-screen max-w-sm mx-auto mt-10 rounded overflow-hidden shadow-lg space-y-4"
->
-  <img
-    class="h-64 w-full object-cover object-center"
-    src="/assets/error/error-img.jpg"
-    alt="Random unsplash photo"
-  />
-  <!-- <img
-    class="h-64 w-full object-cover object-center"
-    src="/assets/logos/logo_web_invert.svg"
-    alt="Wide Sign inverted logo"
-  /> -->
-  <div class="px-6">
-    <div class="font-bold text-xl">{{ title }}</div>
-    <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-      quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-      nihil.
-    </p>
-  </div>
-  <div class="px-6 pb-4 space-x-2">
-    <a
-      href="https://widesign.co.uk"
-      target="_blank"
-      rel="noreferrer"
-      class="inline-block bg-primary-500 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-blue-400"
+<!-- min-h-screen bg-primary-500 md:justify-center md:items-center -->
+<div class="min-h-screen md:flex md:flex-column md:justify-center md:mt-10">
+  <div class="">
+    <!-- MOBILE LOGO / BURGER -->
+    <app-logo-burger class="md:hidden"></app-logo-burger>
+
+    <!-- contact -->
+    <div
+      class="
+        relative
+        group
+        md:h-auto md:row-span-2 md:col-span-4
+        w-full
+        md:rounded md:border
+        border-blue-chill-300
+        p-0
+        bg-no-repeat bg-center
+        sm:bg-cover
+      "
     >
-      Tags are us
-    </a>
+      <!-- LOGO -->
+      <app-logo class="hidden h-28 md:block"></app-logo>
+      <picture>
+        <source type="image/webp" srcset="/assets/error/error-img.webp" />
+        <source srcset="/assets/error/error-img.jpg" type="image/jpeg" />
+        <img src="/assets/error/error-img.jpg" class="h-64 w-full object-cover object-center" alt="Error 404 page" />
+      </picture>
+
+      <div class="p-6">
+        <h1 class="font-extrabold uppercase text-4xl break-all text-korma-400">
+          <a routerLink="/" routerLinkActive="active" class="z-50 cursor-pointer text-blue-chill-200 hover:text-blue-chill-500">home</a>404
+        </h1>
+        <div class="md:hidden block font-extrabold text-2xl text-blue-chill-700 break-all pb-3">Opps! <br />This is embarrassing....</div>
+        <div
+          class="
+            hidden
+            md:block
+            transition-opacity
+            duration-1000
+            ease-out
+            opacity-0
+            group-hover:opacity-100
+            font-extrabold
+            text-2xl text-blue-chill-700
+            break-all
+            pb-3
+          "
+        >
+          Opps! This is embarrassing...
+        </div>
+        <p class="text-lg py-2">
+          <a routerLink="/" routerLinkActive="router-link-active" class="secondary-btn">Give me back my ice-cream!</a>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
