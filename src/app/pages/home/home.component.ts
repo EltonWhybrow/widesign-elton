@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle(this.title)
     this.metaService.updateTag(
-      { name: 'description', content: 'Welcome to WideSign providing Web Development & Design in Redhill and Reigate Surrey' }
+      { name: 'description', content: 'Welcome to WideSign providing Web Development & Design in Redhill and Reigate Surrey England' }
     )
   }
 }
