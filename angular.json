@@ -30,7 +30,11 @@
               "src/favicon.ico",
               "src/assets",
               "src/.htaccess",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/robots.txt",
+              "src/sitemap.xml",
+              "src/sitemap.html",
+              "src/urllist.txt"
             ],
             "styles": [
               "src/styles.scss"
@@ -101,7 +105,11 @@
               "src/favicon.ico",
               "src/assets",
               "src/.htaccess",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/robots.txt",
+              "src/sitemap.xml",
+              "src/sitemap.html",
+              "src/urllist.txt"
             ],
             "styles": [
               "src/styles.scss"
